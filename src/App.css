@@ -153,6 +153,7 @@ body {
   display: flex;
   border-top: 1.5px solid #16447b;
 }
+
 .time-countdown {
   background-color: #0e2c50;
   padding: 3px;
@@ -237,3 +238,44 @@ body {
   width: 12px;
   height: auto;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 78px;
+    background: #0e2c50;
+    box-shadow: 8px 8px 16px rgba(73, 71, 71, .5058823529411764);
+    z-index: 3;
+    border-top: 1.5px solid #16447b;
+    border-top-color: red
+  }
+  
+  .footer-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+  }
+
+  .footer-label{
+    margin-left: 10px;
+  }
+
+  .footer-container .footer-item .active {
+    background: #e70908;
+  }
+  
+  .footer-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: auto;
+  }
+  
