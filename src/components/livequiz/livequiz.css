@@ -1,0 +1,42 @@
+.quiz-header {
+  background: linear-gradient(180deg, #000, rgba(0, 0, 0, 0.2));
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  right: 0;
+  max-width: 550px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+.head-col-center {
+  flex-direction: column;
+  flex: 1 1;
+  grid-gap: 2px;
+  gap: 2px;
+}
+.head-col-center,
+.head-col-left,
+.head-col-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head-subtitle {
+  font-size: 12px;
+  display: flex;
+}
+.burger-menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  background-color: initial;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+  z-index: 99998;
+}

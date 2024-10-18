@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <img
-          src="https://fanizm-prod.s3.amazonaws.com/upload/profile/thumb/avatar7.png"
+          src="https://fanizm-prod.s3.amazonaws.com/upload/profile/thumb/avatar4.png"
           alt="Fanizm Logo"
         />
       </div>
@@ -54,14 +54,21 @@ const Header = () => {
           </g>
         </svg>
       </div>
+
       <div className="user-info">
-        <span className="balance">₹ 0</span>
-        <span className="points">250</span>
-        <img
-          src="/assets/notification-icon.png"
-          alt="Notifications"
-          className="notification-icon"
-        />
+        <div class="head-right-balance">
+          <span style={{ color: "red", fontWeight: "bold" }}>₹&nbsp;</span>0
+        </div>
+        <div class="head-right-balance points">
+          <span class="points-icn">
+            <img
+              src="https://fanizm-prod.s3.amazonaws.com/assets/img/coins-ic.svg"
+              alt=""
+            />
+          </span>
+          300
+        </div>
+        <div class="head-action-btn no-bg icon-qr"></div>
       </div>
     </header>
   );

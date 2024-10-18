@@ -3,31 +3,34 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="nav-item">
-        <img src="/assets/home-icon.png" alt="Home" />
-        <span>Home</span>
+    <div className="default-app-footer mega-footer">
+      <div className="default-inner-footer">
+        <a
+          aria-current="page"
+          className="footer-link  active"
+          href="/app/lobby/live-quiz"
+        >
+          <i className="link-icon icon-home"></i>
+          <span className="link-title">Home</span>
+        </a>
+        <a className="footer-link " href="/app/my-contests/live-quiz">
+          <i className="link-icon icon-trophy"></i>
+          <span className="link-title">My Contests</span>
+        </a>
+        <a className="footer-link " href="/app/merchandise-winnings">
+          <i className="link-icon icon-redeem"></i>
+          <span className="link-title">merchandise</span>
+        </a>
+        <a className="footer-link " href="/app/quiz-starting-soon">
+          <i className="link-icon icon-clock-new"></i>
+          <span className="link-title">Upcoming</span>
+        </a>
+        <a className="footer-link " href="/app/notification">
+          <i className="link-icon icon-alarm-new"></i>
+          <span className="link-title">Notifications</span>
+        </a>
       </div>
-      <div className="nav-item">
-        <img src="/assets/gift-icon.png" alt="Gifts" />
-        <span>Gifts</span>
-      </div>
-      <div className="nav-item center">
-        <img
-          src="/assets/fanizm-logo.png"
-          alt="Fanizm"
-          className="footer-logo"
-        />
-      </div>
-      <div className="nav-item">
-        <img src="/assets/tickets-icon.png" alt="Tickets" />
-        <span>Tickets</span>
-      </div>
-      <div className="nav-item">
-        <img src="/assets/profile-icon.png" alt="Profile" />
-        <span>Profile</span>
-      </div>
-    </footer>
+    </div>
   );
 };
 

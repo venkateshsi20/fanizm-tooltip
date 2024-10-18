@@ -14,10 +14,15 @@ const MovieCard = ({ title, time, imageUrl, id }) => {
   return (
     <div className="movie-card" onClick={() => handleNavigation()}>
       <img src={imageUrl} alt={title} className="movie-image" />
-      <div className="movie-info">
-        <h4>{title}</h4>
-        <p>{time}</p>
-        <span className="prize-tag">🎁 Prizes</span>
+      <div class="lqh-slide-body">
+        <div class="time-countdown">
+          <i class="icon-calender"></i>
+          <span class="timer">22 Oct, 04:55 PM</span>
+        </div>
+        <div class="winning ">
+          <i class="icon-trophy-fill"></i>
+          <span class="primary-color">Prizes</span>
+        </div>
       </div>
     </div>
   );

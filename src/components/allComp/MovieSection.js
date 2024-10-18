@@ -7,7 +7,7 @@ const MovieSection = ({ title, movies }) => {
     <section className="movie-section">
       <div className="section-header">
         <h3>{title}</h3>
-        <span className="view-all">View All</span>
+        {/* <span className="view-all">View All</span> */}
       </div>
       <div className="movie-grid">
         {movies.map((movie, index) => (

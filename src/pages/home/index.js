@@ -55,6 +55,7 @@ import "../../App.css";
 import MovieSection from "../../components/allComp/MovieSection";
 import Footer from "../../components/allComp/Footer";
 import Header from "../../components/allComp/Header";
+import { Autoplay } from "swiper/modules";
 
 function Home() {
   // Sample movie data
@@ -114,41 +115,62 @@ function Home() {
   ];
 
   return (
-    <div className="App">
-      {/* Header */}
-      <Header />
+    <div
+      className="Site-content"
+      style={{
+        backgroundImage:
+          "url('https://fanizm-prod.s3.amazonaws.com/upload/front_bg.png')",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="routing-550">
+        <div className="web-body-container">
+          <Header />
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1.2}
+            centeredSlides={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            style={{ height: "100%" }}
+          >
+            <SwiperSlide>
+              <img
+                src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
+                alt="Banner 1"
+                className="swiper-image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
+                alt="Banner 2"
+                className="swiper-image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
+                alt="Banner 3"
+                className="swiper-image"
+              />
+            </SwiperSlide>
+          </Swiper>
 
-      {/* Swiper for Movies */}
-      <Swiper spaceBetween={50} slidesPerView={1}>
-        <SwiperSlide>
-          <img
-            src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
-            alt="Banner 1"
-            className="swiper-image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
-            alt="Banner 2"
-            className="swiper-image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://fanizm-prod.s3.amazonaws.com/upload/banner/1726689398.webp"
-            alt="Banner 3"
-            className="swiper-image"
-          />
-        </SwiperSlide>
-      </Swiper>
+          {/* Movie Sections */}
+          <MovieSection title="Movies" movies={movies} />
+          <MovieSection title="Trailers" movies={trailers} />
 
-      {/* Movie Sections */}
-      <MovieSection title="Movies" movies={movies} />
-      <MovieSection title="Trailers" movies={trailers} />
-
-      {/* Footer */}
-      <Footer />
+          {/* Footer */}
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
