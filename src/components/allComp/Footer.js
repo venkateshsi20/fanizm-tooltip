@@ -1,34 +1,49 @@
 // src/components/Footer.js
 import React from "react";
+// import "./Footer.css";
+import { FaHome, FaUser, FaBell } from "react-icons/fa"; // Icons used for the footer
 
 const Footer = () => {
   return (
-    <div className="default-app-footer mega-footer">
-      <div className="default-inner-footer">
-        <a
-          aria-current="page"
-          className="footer-link  active"
-          href="/app/lobby/live-quiz"
-        >
-          <i className="link-icon icon-home"></i>
-          <span className="link-title">Home</span>
-        </a>
-        <a className="footer-link " href="/app/my-contests/live-quiz">
-          <i className="link-icon icon-trophy"></i>
-          <span className="link-title">My Contests</span>
-        </a>
-        <a className="footer-link " href="/app/merchandise-winnings">
-          <i className="link-icon icon-redeem"></i>
-          <span className="link-title">merchandise</span>
-        </a>
-        <a className="footer-link " href="/app/quiz-starting-soon">
-          <i className="link-icon icon-clock-new"></i>
-          <span className="link-title">Upcoming</span>
-        </a>
-        <a className="footer-link " href="/app/notification">
-          <i className="link-icon icon-alarm-new"></i>
-          <span className="link-title">Notifications</span>
-        </a>
+    <div>
+      <div className="footer-container">
+        <div className="footer-item">
+          <FaHome className="footer-icon" />
+          <div className="footer-label">
+            <span>Home</span>
+          </div>
+        </div>
+        <div className="footer-item">
+          <FaUser className="footer-icon" />
+          <div className="footer-label">
+            <span>My Contest</span>
+          </div>
+        </div>
+        <div className="footer-item">
+          <FaBell className="footer-icon" />
+          <div className="footer-label">
+            <span>Merchandise</span>
+          </div>
+        </div>
+        <div className="footer-item">
+          <FaBell className="footer-icon" />
+          <div className="footer-label">
+            <span>UpComing</span>
+          </div>
+        </div>
+        <div className="footer-item">
+          <FaBell className="footer-icon" />
+          <div className="footer-label">
+            <span>Notifications</span>
+          </div>
+        </div>
+      </div>
+      <div className="footer-fazImg">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Fanizm-logo.png" // Replace with your own logo if needed
+          alt="Fanizm Logo"
+          className="footer-logo"
+        />
       </div>
     </div>
   );
