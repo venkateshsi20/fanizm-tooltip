@@ -66,6 +66,8 @@ function Home() {
       time: "20 Oct, 12:00 PM",
       imageUrl:
         "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728565370.webp",
+      coverImg:
+        "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728565370.webp",
     },
     {
       id: 2,
@@ -73,6 +75,8 @@ function Home() {
       time: "20 Oct, 01:00 PM",
       imageUrl:
         "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728552982.webp",
+      coverImg:
+        "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728650408.webp",
     },
     {
       id: 3,
@@ -80,6 +84,8 @@ function Home() {
       time: "21 Oct, 06:20 PM",
       imageUrl:
         "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728552308.webp",
+      coverImg:
+        "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728552357.webp",
     },
     {
       id: 4,
@@ -87,6 +93,8 @@ function Home() {
       time: "22 Oct, 04:45 PM",
       imageUrl:
         "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728552598.webp",
+      coverImg:
+        "https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728552609.webp",
     },
   ];
 

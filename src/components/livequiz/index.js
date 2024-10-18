@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 const LiveQuiz = () => {
   const location = useLocation();
   const quizData = location.state;
-  const { title, time, imageUrl } = quizData;
+  const { title, time, imageUrl, coverImg } = quizData;
 
   console.log(quizData);
 
@@ -146,7 +146,7 @@ const LiveQuiz = () => {
                           <div class="quiz-banner">
                             {imageUrl && (
                               <img
-                                src={imageUrl}
+                                src={coverImg ? coverImg : imageUrl}
                                 alt="Quiz"
                                 className="quiz-image"
                               />

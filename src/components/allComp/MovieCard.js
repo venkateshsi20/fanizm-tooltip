@@ -2,11 +2,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({ title, time, imageUrl, id }) => {
+const MovieCard = ({ title, time, imageUrl, id, coverImg }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    const quizData = { title: title, time: time, imageUrl: imageUrl };
+    const quizData = {
+      title: title,
+      time: time,
+      imageUrl: imageUrl,
+      coverImg: coverImg,
+    };
 
     navigate(`/${id}`, { state: quizData });
   };

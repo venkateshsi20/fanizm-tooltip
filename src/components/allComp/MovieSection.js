@@ -17,6 +17,7 @@ const MovieSection = ({ title, movies }) => {
             time={movie.time}
             imageUrl={movie.imageUrl}
             id={movie.id}
+            coverImg={movie.coverImg}
           />
         ))}
       </div>
