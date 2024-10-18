@@ -123,8 +123,10 @@ function Home() {
         backgroundPosition: "center center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
     >
+      <div></div>
       <div className="routing-550">
         <div className="web-body-container">
           <Header />
