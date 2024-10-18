@@ -16,6 +16,7 @@ const MovieSection = ({ title, movies }) => {
             title={movie.title}
             time={movie.time}
             imageUrl={movie.imageUrl}
+            id={movie.id}
           />
         ))}
       </div>
