@@ -6,6 +6,7 @@ const AppLayout = lazy(() =>
   import(/* webpackChunkName: "AppLayout" */ "../components/applayout")
 );
 const Home = lazy(() => import(/* webpackChunkName: "home" */ "../pages/home"));
+const View = lazy(() => import(/* webpackChunkName: "home" */ "../pages/view"));
 
 const childRoutes = [
   {
@@ -21,6 +22,14 @@ const childRoutes = [
     element: (
       <Suspense fallback={"loading..."}>
         <LiveQuiz />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/view",
+    element: (
+      <Suspense fallback={"loading..."}>
+        <View />
       </Suspense>
     ),
   },

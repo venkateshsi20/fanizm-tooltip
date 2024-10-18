@@ -4,6 +4,11 @@ export const routes = {
     name: "Home",
     path: `/`,
   },
+  view: {
+    id: "1",
+    name: "View",
+    path: `/`,
+  },
 };
 
 Object.freeze(routes);
