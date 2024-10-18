@@ -144,21 +144,14 @@ const LiveQuiz = () => {
                       <div class="container-tab-wrap show show">
                         <div class="lqquizdetails is_fade">
                           <div class="quiz-banner">
-                            {/* <span
-                          class="lazy-bg"
-                          style="
-                                  background-image: url('https://fanizm-prod.s3.amazonaws.com/upload/quiz/1728650408.webp');
-                                "
-                        ></span> */}
-                            <img
-                              alt=""
-                              decoding="async"
-                              loading="lazy"
-                              fetchpriority="auto"
-                              src="./Fanizm _ Contest Listing_files/1728650408.webp"
-                              fallbacksrc="https://fanizm-prod.s3.amazonaws.com/assets/img/live_quiz_default.png"
-                              class=""
-                            />
+                            {imageUrl && (
+                              <img
+                                src={imageUrl}
+                                alt="Quiz"
+                                className="quiz-image"
+                              />
+                            )}
+
                             <div class="img-border"></div>
                           </div>
                           <div class="quiz-subtitle">
