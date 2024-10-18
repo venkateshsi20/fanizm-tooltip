@@ -138,7 +138,7 @@ function Home() {
               disableOnInteraction: false,
             }}
             loop={true}
-            style={{ height: "100%" }}
+            style={{ height: "150px" }}
           >
             <SwiperSlide>
               <img

@@ -40,3 +40,42 @@
   transition: all 0.3s ease-out;
   z-index: 99998;
 }
+.web-body-container {
+  max-width: 550px;
+  width: 100%;
+  background: #0b091c;
+  padding-bottom: 83px;
+  min-height: 100vh;
+}
+.lqquizdetails {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px;
+}
+.quiz-banner {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the parent has height */
+  overflow: hidden;
+  display: flex; /* Helps align children within the container */
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Optional: Adds a background in case image doesn't fully fill the area */
+}
+
+.quiz-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Prevents cropping and maintains aspect ratio */
+  display: block;
+}
+
+.img-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black; /* Customize the border style */
+  pointer-events: none; /* Ensures the border does not block interaction with the image */
+}
