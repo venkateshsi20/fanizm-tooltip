@@ -1,0 +1,120 @@
+/* App.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    padding-bottom: 80px; /* To prevent overlap with the footer */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1b1b2f;
+  }
+  
+  .logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .sv-logo {
+    width: 82px;
+    height: 43px;
+    margin-left: -100px;
+  }
+
+  .sv-logo svg {
+    transform: rotate(0deg);
+}
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .balance, .points {
+    margin: 0 10px;
+  }
+  
+  .notification-icon {
+    width: 24px;
+  }
+  
+  .swiper-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .movie-section {
+    margin: 20px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .view-all {
+    color: red;
+  }
+  
+  .movie-grid {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .movie-card {
+    width: 150px;
+    margin-right: 15px;
+    background-color: #2d2d44;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .movie-info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .prize-tag {
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #1b1b2f;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .nav-item {
+    text-align: center;
+  }
+  
+  .footer-logo {
+    width: 50px;
+  }
+  
