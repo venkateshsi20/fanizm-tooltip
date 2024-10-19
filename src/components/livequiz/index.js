@@ -205,150 +205,242 @@ const LiveQuiz = () => {
                                 className="infinite-scroll-component"
                                 style={{ height: "auto", overflow: "auto" }}
                               >
-                                <div className="contest-list-wrapper xmt20 mb20">
-                                  <div className="contest-listing-card is-mega-contest">
-                                    <div className="rookie-contest-view">
-                                      <div className="contest-listing-card-header">
-                                        <img
-                                          src="https://fanizm-prod.s3.amazonaws.com/assets/img/1711275142.jpeg"
-                                          alt=""
-                                          className="contest-img"
-                                        />
-                                        <div className="contest-right">
-                                          <div className="contest-name-heading">
-                                            Mega Contest
-                                          </div>
-                                          <div className="contest-name-heading-description">
-                                            Enter the hottest contest with mega
-                                            prize.
+                                {activeTab == 1 && (
+                                  <div className="contest-list-wrapper xmt20 mb20">
+                                    <div className="contest-listing-card is-mega-contest">
+                                      <div className="rookie-contest-view">
+                                        <div className="contest-listing-card-header">
+                                          <img
+                                            src="https://fanizm-prod.s3.amazonaws.com/assets/img/1711275142.jpeg"
+                                            alt=""
+                                            className="contest-img"
+                                          />
+                                          <div className="contest-right">
+                                            <div className="contest-name-heading">
+                                              Mega Contest
+                                            </div>
+                                            <div className="contest-name-heading-description">
+                                              Enter the hottest contest with
+                                              mega prize.
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div>
-                                      <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
-                                        <div className="contest-list-header">
-                                          <div class="contest-heading">
-                                            <div class="featured-icon-wrap">
-                                              <span class="featured-icon new-featured-icon gau-feat">
-                                                <i class="icon-checked"></i>{" "}
-                                                guaranteed
-                                              </span>
-                                            </div>
-                                            <h3 class="win-type">
-                                              <span class="position-relative">
-                                                <span>Practice contests</span>
-                                              </span>
-                                              <i class="icon-share-arrow"></i>
-                                            </h3>
-                                            <div class="max-prize-pool pool-with-prize-r">
-                                              <div class="prize-pool-l">
-                                                {" "}
-                                                Practise Contest
-                                              </div>
-                                              <div class="display-table-cell v-mid position-relative entry-criteria">
-                                                <span class="entry-txt">
-                                                  Entry Ticket
-                                                </span>{" "}
-                                                <button
-                                                  type="button"
-                                                  class="white-base btnStyle btn-rounded    btn btn-primary"
-                                                >
-                                                  Free
-                                                </button>
+                                      <div>
+                                        <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
+                                          <div className="contest-list-header">
+                                            <div class="contest-heading">
+                                              <h3 class="win-type">
+                                                <span class="position-relative">
+                                                  <span>Practice contests</span>
+                                                </span>
+                                                <i class="icon-share-arrow"></i>
+                                              </h3>
+                                              <div class="max-prize-pool pool-with-prize-r">
+                                                <div class="prize-pool-l">
+                                                  {" "}
+                                                  Practise Contest
+                                                </div>
+                                                <div class="display-table-cell v-mid position-relative entry-criteria">
+                                                  <span class="entry-txt">
+                                                    Entry Ticket
+                                                  </span>{" "}
+                                                  <button
+                                                    type="button"
+                                                    class="white-base btnStyle btn-rounded    btn btn-primary"
+                                                  >
+                                                    Free
+                                                  </button>
+                                                </div>
                                               </div>
                                             </div>
-                                          </div>
-                                          <div className="display-table d-flex top-btm-10px">
-                                            <div className="progress-bar-default display-table-cell v-mid">
-                                              <div className="progress">
-                                                <div
-                                                  role="progressbar"
-                                                  className="progress-bar"
-                                                  aria-valuenow={250}
-                                                  aria-valuemin={0}
-                                                  aria-valuemax={100}
-                                                  style={{ width: "100%" }}
-                                                ></div>
-                                              </div>
+                                            <div className="display-table d-flex top-btm-10px">
+                                              <div className="progress-bar-default display-table-cell v-mid">
+                                                <div className="progress">
+                                                  <div
+                                                    role="progressbar"
+                                                    className="progress-bar"
+                                                    aria-valuenow={250}
+                                                    aria-valuemin={0}
+                                                    aria-valuemax={100}
+                                                    style={{ width: "100%" }}
+                                                  ></div>
+                                                </div>
 
-                                              <div className="progress-bar-value">
-                                                <span className="total-entries">
-                                                  5 left
-                                                </span>
-                                                <span className="min-entries">
-                                                  10 Slots
-                                                </span>
+                                                <div className="progress-bar-value">
+                                                  <span className="total-entries">
+                                                    5 left
+                                                  </span>
+                                                  <span className="min-entries">
+                                                    10 Slots
+                                                  </span>
+                                                </div>
                                               </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    {/* <div>
-                                      <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
-                                        <div className="contest-list-header">
-                                          <div className="contest-heading">
-                                            <div className="featured-icon-wrap">
-                                              <span className="featured-icon new-featured-icon gau-feat">
-                                                <i className="icon-checked"></i>{" "}
-                                                guaranteed
-                                              </span>
+                                    </div>{" "}
+                                    <div className="contest-listing-card is-mega-contest">
+                                      <div className="rookie-contest-view">
+                                        <div className="contest-listing-card-header">
+                                          <img
+                                            src="https://fanizm-prod.s3.amazonaws.com/assets/img/1711275142.jpeg"
+                                            alt=""
+                                            className="contest-img"
+                                          />
+                                          <div className="contest-right">
+                                            <div className="contest-name-heading">
+                                              HEAD TO HEAD
                                             </div>
-                                            <h3 className="win-type">
-                                              <span className="position-relative">
-                                                <span>Practice contests</span>
-                                              </span>
-                                              <i className="icon-share-arrow"></i>
-                                            </h3>
-                                            <div className="max-prize-pool pool-with-prize-r">
-                                              <div className="prize-pool-l">
-                                                Practise Contest
-                                              </div>
-                                              <div className="display-table-cell v-mid position-relative entry-criteria">
-                                                <span className="entry-txt">
-                                                  Entry Ticket
-                                                </span>
-                                                <button
-                                                  type="button"
-                                                  className="white-base btnStyle btn-rounded btn btn-primary"
-                                                >
-                                                  Free
-                                                </button>
-                                              </div>
+                                            <div className="contest-name-heading-description">
+                                              head 2 Head
                                             </div>
                                           </div>
-                                          <div className="display-table d-flex top-btm-10px">
-                                            <div className="progress-bar-default display-table-cell v-mid">
-                                              <div className="progress">
-                                                <div
-                                                  role="progressbar"
-                                                  className="progress-bar"
-                                                  aria-valuenow={100}
-                                                  aria-valuemin={0}
-                                                  aria-valuemax={100}
-                                                  style={{ width: "100%" }}
-                                                ></div>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
+                                          <div className="contest-list-header">
+                                            <div class="contest-heading">
+                                              <h3 class="win-type">
+                                                <span class="position-relative">
+                                                  <span>Fast Filling..</span>
+                                                </span>
+                                                <i class="icon-share-arrow"></i>
+                                              </h3>
+                                              <div class="max-prize-pool pool-with-prize-r">
+                                                <div class="prize-pool-l">
+                                                  {" "}
+                                                  Practise Contest
+                                                </div>
+                                                <div class="display-table-cell v-mid position-relative entry-criteria">
+                                                  <span class="entry-txt">
+                                                    Entry Ticket
+                                                  </span>{" "}
+                                                  <button
+                                                    type="button"
+                                                    class="white-base btnStyle btn-rounded    btn btn-primary"
+                                                  >
+                                                    Free
+                                                  </button>
+                                                </div>
                                               </div>
-                                              <div className="progress-bar-value">
-                                                <span className="total-entries">
-                                                  18 left
-                                                </span>
-                                                <span className="min-entries">
-                                                  20 Slots
-                                                </span>
+                                            </div>
+                                            <div className="display-table d-flex top-btm-10px">
+                                              <div className="progress-bar-default display-table-cell v-mid">
+                                                <div className="progress">
+                                                  <div
+                                                    role="progressbar"
+                                                    className="progress-bar"
+                                                    aria-valuenow={250}
+                                                    aria-valuemin={0}
+                                                    aria-valuemax={100}
+                                                    style={{ width: "100%" }}
+                                                  ></div>
+                                                </div>
+
+                                                <div className="progress-bar-value">
+                                                  <span className="total-entries">
+                                                    5 left
+                                                  </span>
+                                                  <span className="min-entries">
+                                                    10 Slots
+                                                  </span>
+                                                </div>
                                               </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </div> */}
-                                    <div className="text-center show-more-contest">
-                                      More contest
-                                      <i className="icon-arrow-down"></i>
+
+                                      <div className="text-center show-more-contest">
+                                        More contest
+                                        <i className="icon-arrow-down"></i>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
+                                )}
+                                {activeTab == 2 && (
+                                  <div className="contest-list-wrapper xmt20 mb20">
+                                    <div className="contest-listing-card is-mega-contest">
+                                      <div className="rookie-contest-view">
+                                        <div className="contest-listing-card-header">
+                                          <img
+                                            src="https://fanizm-prod.s3.amazonaws.com/assets/img/1711275142.jpeg"
+                                            alt=""
+                                            className="contest-img"
+                                          />
+                                          <div className="contest-right">
+                                            <div className="contest-name-heading">
+                                              HEAD TO HEAD
+                                            </div>
+                                            <div className="contest-name-heading-description">
+                                              head 2 Head
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
+                                          <div className="contest-list-header">
+                                            <div class="contest-heading">
+                                              <div class="featured-icon-wrap">
+                                                <span class="featured-icon new-featured-icon gau-feat">
+                                                  <i class="icon-checked"></i>{" "}
+                                                  guaranteed
+                                                </span>
+                                              </div>
+                                              <h3 class="win-type">
+                                                <span class="position-relative">
+                                                  <span>Fast Filling..</span>
+                                                </span>
+                                                <i class="icon-share-arrow"></i>
+                                              </h3>
+                                              <div class="max-prize-pool pool-with-prize-r">
+                                                <div class="prize-pool-l">
+                                                  {" "}
+                                                  Practise Contest
+                                                </div>
+                                                <div class="display-table-cell v-mid position-relative entry-criteria">
+                                                  <button
+                                                    type="button"
+                                                    class="white-base btnStyle btn-rounded    btn btn-primary"
+                                                  >
+                                                    View
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div className="display-table d-flex top-btm-10px">
+                                              <div className="progress-bar-default display-table-cell v-mid">
+                                                <div className="progress">
+                                                  <div
+                                                    role="progressbar"
+                                                    className="progress-bar"
+                                                    aria-valuenow={250}
+                                                    aria-valuemin={0}
+                                                    aria-valuemax={100}
+                                                    style={{ width: "100%" }}
+                                                  ></div>
+                                                </div>
+
+                                                <div className="progress-bar-value">
+                                                  <span className="total-entries">
+                                                    5 left
+                                                  </span>
+                                                  <span className="min-entries">
+                                                    10 Slots
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </div>
