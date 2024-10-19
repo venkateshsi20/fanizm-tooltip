@@ -2,6 +2,7 @@ import React from "react";
 import "../addFund";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
+import Tippy from "@tippyjs/react";
 const AddFund = () => {
   const nevigate = useNavigate();
   return (
@@ -122,14 +123,23 @@ const AddFund = () => {
                     </div>
                   </div>
                   <div className="text-center add-fund">
-                    <a
-                      className="button button-primary-rounded button-block"
-                      onClick={() => {
-                        nevigate("/payment-method");
-                      }}
+                    <Tippy
+                      theme="custom"
+                      animation="fade"
+                      visible={true}
+                      content={"This is a highlighted movie!"}
                     >
-                      Add Cash
-                    </a>
+                      <a
+                        className="button button-primary-rounded button-block"
+                        onClick={() => {
+                          nevigate("/payment-method");
+                        }}
+                        style={{ zIndex: 10000000000 }}
+                      >
+                        Add Cash
+                      </a>
+                    </Tippy>
+                    <div className="quiz-overlay" />
                   </div>
                 </div>
               </div>

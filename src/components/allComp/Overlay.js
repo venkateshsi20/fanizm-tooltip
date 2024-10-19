@@ -1,4 +1,5 @@
 // Overlay.js
+import Tippy from "@tippyjs/react";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -114,16 +115,25 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
             </div>
           </div>
           <div className="overlay__footer dual-btn-footer modal-footer">
-            <a
-              className="joinContestConfirm single-text"
-              onClick={() => {
-                navigate("/add-fund");
-              }}
+            <Tippy
+              theme="custom"
+              animation="fade"
+              visible={true}
+              content={"This is a highlighted movie!"}
             >
-              Add Funds & Join Contest
-            </a>
+              <a
+                className="joinContestConfirm single-text"
+                onClick={() => {
+                  navigate("/add-fund");
+                }}
+                style={{ zIndex: 10 }}
+              >
+                Add Funds & Join Contest
+              </a>
+            </Tippy>
           </div>
         </div>
+        <div className="quiz-overlay" />
       </div>
     </div>
   );
