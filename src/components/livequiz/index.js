@@ -3,6 +3,7 @@ import "./livequiz.css";
 import "../../App.css";
 import { useLocation } from "react-router-dom";
 import Overlay from "../allComp/Overlay";
+import ViewOverlay from "../allComp/ViewOverlay";
 
 const LiveQuiz = () => {
   const location = useLocation();
@@ -436,7 +437,16 @@ const LiveQuiz = () => {
       {joinContestOverlay && (
         <Overlay
           handleJoinContestOverlay={handleJoinContestOverlay}
+          handleViewContestOverlay={handleViewContestOverlay}
           quizData={quizData}
+        />
+      )}
+
+      {viewContestOverlay && (
+        <ViewOverlay
+          handleJoinContestOverlay={handleJoinContestOverlay}
+          handleViewContestOverlay={handleViewContestOverlay}
+          setActiveTab={setActiveTab}
         />
       )}
     </>

@@ -1,7 +1,11 @@
 // Overlay.js
 import React, { useEffect } from "react";
 
-const Overlay = ({ handleJoinContestOverlay, quizData }) => {
+const Overlay = ({
+  handleJoinContestOverlay,
+  quizData,
+  handleViewContestOverlay,
+}) => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -9,8 +13,6 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
     };
   }, []);
   return (
-   
-
     <div className="overlay">
       <div className="overlay__wrap">
         <div className="overlay__content">
@@ -88,7 +90,14 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
             </div>
           </div>
           <div class="overlay__footer dual-btn-footer modal-footer">
-            <a class="joinContestConfirm single-text ">Confirm</a>
+            <a
+              class="joinContestConfirm single-text "
+              onClick={() => {
+                handleViewContestOverlay();
+              }}
+            >
+              Confirm
+            </a>
           </div>
         </div>
       </div>
