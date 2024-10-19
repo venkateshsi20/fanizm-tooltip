@@ -14,6 +14,9 @@ const LiveQuiz = () => {
     { id: 2, label: "My Contest" },
   ];
 
+  const [joinContestOverlay, setJoinContestOverlay] = useState(false);
+  const [viewContestOverlay, setViewContestOverlay] = useState(false);
+
   return (
     <>
       <div class="toast-wrapper" style={{ Zindex: 99999 }}>
@@ -225,7 +228,37 @@ const LiveQuiz = () => {
                                     <div>
                                       <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
                                         <div className="contest-list-header">
-                                        <div class="contest-heading"><div class="featured-icon-wrap"><span class="featured-icon new-featured-icon gau-feat"><i class="icon-checked"></i> guaranteed</span></div><h3 class="win-type"><span class="position-relative"><span>Practice contests</span></span><i class="icon-share-arrow"></i></h3><div class="max-prize-pool pool-with-prize-r"><div class="prize-pool-l"> Practise Contest</div><div class="display-table-cell v-mid position-relative entry-criteria"><span class="entry-txt">Entry Ticket</span> <button type="button" class="white-base btnStyle btn-rounded    btn btn-primary">Free</button></div></div></div>
+                                          <div class="contest-heading">
+                                            <div class="featured-icon-wrap">
+                                              <span class="featured-icon new-featured-icon gau-feat">
+                                                <i class="icon-checked"></i>{" "}
+                                                guaranteed
+                                              </span>
+                                            </div>
+                                            <h3 class="win-type">
+                                              <span class="position-relative">
+                                                <span>Practice contests</span>
+                                              </span>
+                                              <i class="icon-share-arrow"></i>
+                                            </h3>
+                                            <div class="max-prize-pool pool-with-prize-r">
+                                              <div class="prize-pool-l">
+                                                {" "}
+                                                Practise Contest
+                                              </div>
+                                              <div class="display-table-cell v-mid position-relative entry-criteria">
+                                                <span class="entry-txt">
+                                                  Entry Ticket
+                                                </span>{" "}
+                                                <button
+                                                  type="button"
+                                                  class="white-base btnStyle btn-rounded    btn btn-primary"
+                                                >
+                                                  Free
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
                                           <div className="display-table d-flex top-btm-10px">
                                             <div className="progress-bar-default display-table-cell v-mid">
                                               <div className="progress">
