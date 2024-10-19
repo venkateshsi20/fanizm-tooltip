@@ -953,12 +953,11 @@ body {
 
 .quiz-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  background: rgba(0, 0, 0, 0.5);
+    top: -50%;
+    left: 0;
+    width: 100vw;
+    height: 150%;
+    background: rgba(0, 0, 0, 0.5);
 }
 /* z-index: 4; */
 .amount-option {
@@ -1292,4 +1291,114 @@ button, input {
   font-size: 20px;
   color: #fff;
 
+}
+
+.head-title {
+  font-size: 16px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.payable-amt {
+  padding: 10px;
+  color: #fff;
+  background: #12386b;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .1);
+}
+.payable-amt .payable-amt-view {
+  margin-left: 2px;
+}
+.payable-amt i {
+  font-size: 18px;
+  position: relative;
+}
+.how-would-you-view {
+  margin: 40px auto;
+  color: #212121;
+  font-size: 20px;
+  text-align: center;
+}
+.payment-method-container {
+  padding: 20px;
+}
+.payment-method-container .payment-card-row {
+  display: flex;
+  grid-gap: 15px;
+  gap: 15px;
+  flex: 1 1;
+  flex-flow: wrap;
+  place-content: stretch flex-start;
+  align-items: stretch;
+}
+.payment-method-container .payment-card {
+  background: #fff;
+  border-radius: 10px;
+  width: calc(50% - 7.5px);
+  margin-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  min-height: 182px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.payment-method-container .payment-card-cursor {
+  pointer-events: none;
+  position: relative;
+}
+.payment-method-container .payment-card .c-image {
+  min-height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.payment-method-container .payment-card .c-image .img-fluid {
+  width: 100%;
+  max-width: 130px;
+}
+.payment-method-container .payment-content {
+  padding: 15px 10px;
+  background-color: #fafafa;
+  border-radius: 0 0 10px 10px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.payment-method-container .payment-content .payments-name {
+  font-size: 14px;
+  color: #333;
+  text-transform: capitalize;
+}
+.payment-method-container .payment-content .payements-desc {
+  color: #707070;
+  font-size: 12px;
+}
+.payment-method-container .payment-content {
+  padding: 15px 10px;
+  background-color: #fafafa;
+  border-radius: 0 0 10px 10px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.payment-method-container .payment-card-cursor:after {
+  content: "";
+  background: hsla(0, 0%, 100%, .32) url(https://fanizm.com/app/static/media/spiner.5ee8137e.svg) no-repeat 50% !important;
+  background-size: 25px !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
 }
