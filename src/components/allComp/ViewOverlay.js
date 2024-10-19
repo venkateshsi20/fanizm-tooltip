@@ -30,27 +30,27 @@ const ViewOverlay = ({
           <div className="overlay__header">
             <button
               type="button"
-              class="close"
+              className="close"
               onClick={() => {
                 handleViewContestOverlay();
               }}
             >
               <span aria-hidden="true">×</span>
-              <span class="sr-only">Close</span>
+              <span className="sr-only">Close</span>
             </button>
 
-            <div class="overlay__header-img">
-              <div class="wrap ">
+            <div className="overlay__header-img">
+              <div className="wrap ">
                 <img src="https://fanizm-prod.s3.amazonaws.com/assets/img/JoinGame.svg" />
               </div>
             </div>
-            <div class="overlay__header-confirm ">GAME ON</div>
+            <div className="overlay__header-confirm ">GAME ON</div>
           </div>
 
-          <div class="overlay__body">
-            <div class="p-0 row">
-              <div class="p-0 col-xs-12">
-                <div class="amount-subtext">
+          <div className="overlay__body">
+            <div className="p-0 row">
+              <div className="p-0 col-xs-12">
+                <div className="amount-subtext">
                   Total Balance available for this contest is your Deposit
                   Amount + Winnings + 0% of entry fee eligible to use from Bonus
                   Cash Wallet (Max ₹100000)
@@ -58,9 +58,9 @@ const ViewOverlay = ({
               </div>
             </div>
           </div>
-          <div class="overlay__footer dual-btn-footer modal-footer">
+          <div className="overlay__footer dual-btn-footer modal-footer">
             <a
-              class="joinContestConfirm single-text "
+              className="joinContestConfirm single-text "
               onClick={() => {
                 handleJoinMoreContest();
               }}
@@ -68,7 +68,7 @@ const ViewOverlay = ({
               JOIN MORE CONTEST
             </a>
             <a
-              class="joinContestConfirm single-text "
+              className="joinContestConfirm single-text "
               onClick={() => {
                 handleMyContest();
               }}

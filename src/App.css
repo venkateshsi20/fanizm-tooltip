@@ -892,7 +892,7 @@ body {
 /* src/components/HighlightedTooltip.css */
 
 /* Overlay to block clicks on the rest of the page */
-.overlay {
+.footer-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -937,7 +937,8 @@ body {
 .highlighted {
   border: 2px solid yellow; /* Highlight color */
   /* transform: scale(1.1); Slight scaling effect */
-  z-index: 1; /* Bring highlighted card above others */
+  z-index: 1000; /* Bring highlighted card above others */
+  padding: 5px;
 }
 
 .movie-overlay {
@@ -947,5 +948,15 @@ body {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 4;
+}
+
+.quiz-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  /* z-index: 4; */
 }

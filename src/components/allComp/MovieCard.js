@@ -23,15 +23,15 @@ const MovieCard = ({ title, time, imageUrl, id, coverImg, isHighlighted }) => {
       onClick={() => handleNavigation()}
     >
       <img src={imageUrl} alt={title} className="movie-image" />
-      <div class="lqh-slide-body">
-        <div class="time-countdown">
+      <div className="lqh-slide-body">
+        <div className="time-countdown">
           <FaCalendar className="movie-cal-icon" />
-          <span class="timer">22 Oct, 04:55 PM</span>
+          <span className="timer">22 Oct, 04:55 PM</span>
         </div>
-        <div class="winning ">
+        <div className="winning ">
           <FaTrophy className="movie-trophy-icon" />
 
-          <span class="primary-color">Prizes</span>
+          <span className="primary-color">Prizes</span>
         </div>
       </div>
     </div>

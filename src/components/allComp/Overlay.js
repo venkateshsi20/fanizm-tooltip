@@ -19,69 +19,73 @@ const Overlay = ({
           <div className="overlay__header">
             <button
               type="button"
-              class="close"
+              className="close"
               onClick={() => {
                 handleJoinContestOverlay();
               }}
             >
               <span aria-hidden="true">×</span>
-              <span class="sr-only">Close</span>
+              <span className="sr-only">Close</span>
             </button>
 
-            <div class="overlay__header-img">
-              <div class="wrap ">
+            <div className="overlay__header-img">
+              <div className="wrap ">
                 <img src="https://fanizm-prod.s3.amazonaws.com/assets/img/Confirmation.svg" />
               </div>
             </div>
-            <div class="overlay__header-confirm ">Confirmation</div>
+            <div className="overlay__header-confirm ">Confirmation</div>
           </div>
 
-          <div class="overlay__body">
-            <div class="mt20 row">
-              <div class="col-xs-12">
-                <div class="confirm-quiz-heading">
-                  <div class="quiz-name">{quizData.title}</div>
-                  <div class="winning-amt">
+          <div className="overlay__body">
+            <div className="mt20 row">
+              <div className="col-xs-12">
+                <div className="confirm-quiz-heading">
+                  <div className="quiz-name">{quizData.title}</div>
+                  <div className="winning-amt">
                     <span>Win</span> Prizes
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="fee-container">
-                  <div class="lable-text">Current Balance</div>
-                  <div class="payable-amount-value">
-                    <span class="">₹0.00</span>
+            <div className="row">
+              <div className="col-xs-12">
+                <div className="fee-container">
+                  <div className="lable-text">Current Balance</div>
+                  <div className="payable-amount-value">
+                    <span className="">₹0.00</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="p-0 row">
-              <div class="p-0 col-xs-12">
-                <div class="amount-subtext">
+            <div className="p-0 row">
+              <div className="p-0 col-xs-12">
+                <div className="amount-subtext">
                   Total Balance available for this contest is your Deposit
                   Amount + Winnings + 0% of entry fee eligible to use from Bonus
                   Cash Wallet (Max ₹100000)
                 </div>
               </div>
             </div>
-            <div class="p-0 row">
-              <div class="col-xs-12">
-                <div class="fee-container">
-                  <div class="lable-text">Joining Amount</div>
-                  <div class="payable-amount-value">
-                    <span class="confirmation">Free</span>
+            <div className="p-0 row">
+              <div className="col-xs-12">
+                <div className="fee-container">
+                  <div className="lable-text">Joining Amount</div>
+                  <div className="payable-amount-value">
+                    <span className="confirmation">Free</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="p-0 row">
-              <div class="p-0 col-xs-12">
-                <div class="amount-subtext amount-subtext-font10 mb-0">
+            <div className="p-0 row">
+              <div className="p-0 col-xs-12">
+                <div className="amount-subtext amount-subtext-font10 mb-0">
                   By joining this contest, you accept Fanizm T&amp;C I also
                   agree to be contacted by Fanizm and their partners.
-                  <a class="primary" target="_blank" href="/terms-condition">
+                  <a
+                    className="primary"
+                    target="_blank"
+                    href="/terms-condition"
+                  >
                     {" "}
                     Go to T&amp;C{" "}
                   </a>
@@ -89,9 +93,9 @@ const Overlay = ({
               </div>
             </div>
           </div>
-          <div class="overlay__footer dual-btn-footer modal-footer">
+          <div className="overlay__footer dual-btn-footer modal-footer">
             <a
-              class="joinContestConfirm single-text "
+              className="joinContestConfirm single-text "
               onClick={() => {
                 handleViewContestOverlay();
               }}

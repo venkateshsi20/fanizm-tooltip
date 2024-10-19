@@ -4,6 +4,7 @@ import "../../App.css";
 import { useLocation } from "react-router-dom";
 import Overlay from "../allComp/Overlay";
 import ViewOverlay from "../allComp/ViewOverlay";
+import Tippy from "@tippyjs/react";
 
 const LiveQuiz = () => {
   const location = useLocation();
@@ -58,18 +59,18 @@ const LiveQuiz = () => {
 
   return (
     <>
-      <div class="toast-wrapper" style={{ Zindex: 99999 }}>
-        <div class="toast-inner-wrapper blur-bg"></div>
-        <div class="toast-inner-wrapper">
-          <span class="icon-wrap">
-            <i class=""></i>
+      <div className="toast-wrapper" style={{ Zindex: 99999 }}>
+        <div className="toast-inner-wrapper blur-bg"></div>
+        <div className="toast-inner-wrapper">
+          <span className="icon-wrap">
+            <i className=""></i>
           </span>
-          <span class="text-wrap"></span>
-          <i class="icon-close"></i>
+          <span className="text-wrap"></span>
+          <i className="icon-close"></i>
         </div>
       </div>
       <div
-        class="Site-content"
+        className="Site-content"
         style={{
           backgroundImage:
             "url('https://fanizm-prod.s3.amazonaws.com/upload/front_bg.png')",
@@ -170,27 +171,27 @@ const LiveQuiz = () => {
                 <div className=""></div>
               </div>
             </div>
-            <div class="burger-menu-backdrop "></div>
+            <div className="burger-menu-backdrop "></div>
             {/* main sections */}
-            <div class="mobile-wrap">
-              <div class="web-container contest-listing-web-conatiner header-margin minus-header-height bg-white contest-listing-new ML-contest-listing LQ-contest-list-view with-detail-screen">
-                <div class="webcontainer-inner">
-                  <div class="ptr">
-                    <div class="ptr__pull-down">
-                      <div class="ptr__loader ptr__pull-down--loading">
-                        <div class="lds-ellipsis">
+            <div className="mobile-wrap">
+              <div className="web-container contest-listing-web-conatiner header-margin minus-header-height bg-white contest-listing-new ML-contest-listing LQ-contest-list-view with-detail-screen">
+                <div className="webcontainer-inner">
+                  <div className="ptr">
+                    <div className="ptr__pull-down">
+                      <div className="ptr__loader ptr__pull-down--loading">
+                        <div className="lds-ellipsis">
                           <div></div>
                           <div></div>
                           <div></div>
                           <div></div>
                         </div>
                       </div>
-                      <div class="ptr__pull-down--pull-more"></div>
+                      <div className="ptr__pull-down--pull-more"></div>
                     </div>
-                    <div class="ptr__children">
-                      <div class="container-tab-wrap show show">
-                        <div class="lqquizdetails is_fade">
-                          <div class="quiz-banner">
+                    <div className="ptr__children">
+                      <div className="container-tab-wrap show show">
+                        <div className="lqquizdetails is_fade">
+                          <div className="quiz-banner">
                             {imageUrl && (
                               <img
                                 src={coverImg ? coverImg : imageUrl}
@@ -199,19 +200,19 @@ const LiveQuiz = () => {
                               />
                             )}
 
-                            <div class="img-border"></div>
+                            <div className="img-border"></div>
                           </div>
-                          <div class="quiz-subtitle">
-                            <span class="rules-modal-trigger">
-                              <i class="icon-rules-edit"></i>Rules
+                          <div className="quiz-subtitle">
+                            <span className="rules-modal-trigger">
+                              <i className="icon-rules-edit"></i>Rules
                             </span>
                             {title}
-                            <span class="more-detals-trigger  ">
+                            <span className="more-detals-trigger  ">
                               Read more..
                             </span>
                           </div>
-                          <div class="quiz-content-box sm">
-                            <div class="quiz-content-heading">
+                          <div className="quiz-content-box sm">
+                            <div className="quiz-content-heading">
                               Quiz Available in -
                               <p>
                                 <span>English</span>
@@ -220,8 +221,8 @@ const LiveQuiz = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="container-tab-wrap show">
-                        <div class="tab-group live-quiz-tab">
+                      <div className="container-tab-wrap show">
+                        <div className="tab-group live-quiz-tab">
                           <ul>
                             {contestTab.map((tab) => (
                               <li
@@ -246,7 +247,7 @@ const LiveQuiz = () => {
                               >
                                 {activeTab == 1 && (
                                   <div className="contest-list-wrapper xmt20 mb20">
-                                    {upcomingContest.map((contest) => (
+                                    {upcomingContest.map((contest, i) => (
                                       <div className="contest-listing-card is-mega-contest">
                                         <div className="rookie-contest-view">
                                           <div className="contest-listing-card-header">
@@ -268,31 +269,56 @@ const LiveQuiz = () => {
                                         <div>
                                           <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
                                             <div className="contest-list-header">
-                                              <div class="contest-heading">
-                                                <h3 class="win-type">
-                                                  <span class="position-relative">
+                                              <div className="contest-heading">
+                                                <h3 className="win-type">
+                                                  <span className="position-relative">
                                                     <span>{contest.type}</span>
                                                   </span>
-                                                  <i class="icon-share-arrow"></i>
+                                                  <i className="icon-share-arrow"></i>
                                                 </h3>
-                                                <div class="max-prize-pool pool-with-prize-r">
-                                                  <div class="prize-pool-l">
+                                                <div className="max-prize-pool pool-with-prize-r">
+                                                  <div className="prize-pool-l">
                                                     {contest.heading}
                                                   </div>
-                                                  <div class="display-table-cell v-mid position-relative entry-criteria">
-                                                    <span class="entry-txt">
-                                                      {contest.entry}
-                                                    </span>{" "}
-                                                    <button
-                                                      type="button"
-                                                      class="white-base btnStyle btn-rounded    btn btn-primary"
-                                                      onClick={() =>
-                                                        handleJoinContestOverlay()
-                                                      }
+                                                  <Tippy
+                                                    key={i} // Unique id for Tippy
+                                                    theme="custom"
+                                                    animation="fade"
+                                                    visible={true}
+                                                    content={
+                                                      "This is a highlighted movie!"
+                                                    }
+                                                    disabled={
+                                                      i == 1 ||
+                                                      joinContestOverlay
+                                                    } // Disable tooltip when not highlighted
+                                                  >
+                                                    <div
+                                                      className={`display-table-cell v-mid position-relative entry-criteria ${
+                                                        i == 0 &&
+                                                        !joinContestOverlay
+                                                          ? "highlighted"
+                                                          : ""
+                                                      }`}
+                                                      style={{
+                                                        zIndex:
+                                                          i == 0 ? "100" : null,
+                                                      }}
                                                     >
-                                                      {contest.buttonType}
-                                                    </button>
-                                                  </div>
+                                                      <span className="entry-txt">
+                                                        {contest.entry}{" "}
+                                                      </span>{" "}
+                                                      <button
+                                                        type="button"
+                                                        className="white-base btnStyle btn-rounded btn btn-primary"
+                                                        onClick={() =>
+                                                          handleJoinContestOverlay()
+                                                        }
+                                                      >
+                                                        {contest.buttonType}
+                                                      </button>
+                                                    </div>
+                                                  </Tippy>
                                                 </div>
                                               </div>
                                               <div className="display-table d-flex top-btm-10px">
@@ -328,6 +354,9 @@ const LiveQuiz = () => {
                                             </div>
                                           </div>
                                         </div>
+                                        {i == 0 && !joinContestOverlay ? (
+                                          <div className="quiz-overlay" />
+                                        ) : null}
                                       </div>
                                     ))}
 
@@ -360,28 +389,28 @@ const LiveQuiz = () => {
                                       <div>
                                         <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
                                           <div className="contest-list-header">
-                                            <div class="contest-heading">
-                                              <div class="featured-icon-wrap">
-                                                <span class="featured-icon new-featured-icon gau-feat">
-                                                  <i class="icon-checked"></i>{" "}
+                                            <div className="contest-heading">
+                                              <div className="featured-icon-wrap">
+                                                <span className="featured-icon new-featured-icon gau-feat">
+                                                  <i className="icon-checked"></i>{" "}
                                                   guaranteed
                                                 </span>
                                               </div>
-                                              <h3 class="win-type">
-                                                <span class="position-relative">
+                                              <h3 className="win-type">
+                                                <span className="position-relative">
                                                   <span>Fast Filling..</span>
                                                 </span>
-                                                <i class="icon-share-arrow"></i>
+                                                <i className="icon-share-arrow"></i>
                                               </h3>
-                                              <div class="max-prize-pool pool-with-prize-r">
-                                                <div class="prize-pool-l">
+                                              <div className="max-prize-pool pool-with-prize-r">
+                                                <div className="prize-pool-l">
                                                   {" "}
                                                   Practise Contest
                                                 </div>
-                                                <div class="display-table-cell v-mid position-relative entry-criteria">
+                                                <div className="display-table-cell v-mid position-relative entry-criteria">
                                                   <button
                                                     type="button"
-                                                    class="white-base btnStyle btn-rounded    btn btn-primary"
+                                                    className="white-base btnStyle btn-rounded    btn btn-primary"
                                                     onClick={() =>
                                                       handleViewContestOverlay()
                                                     }
