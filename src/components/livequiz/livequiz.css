@@ -1,15 +1,47 @@
-.quiz-header {
-  background: linear-gradient(180deg, #000, rgba(0, 0, 0, 0.2));
-  color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  right: 0;
-  max-width: 550px;
-  height: 56px;
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+    /* font-family: SFProDisplay-Regular; */
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background: #0b091c;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    -webkit-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    letter-spacing: .1px;
+}
+
+.routing-550 {
   display: flex;
-  align-items: center;
+}
+.quiz-header {
+  background: linear-gradient(180deg, #000, rgba(0, 0, 0, .2));
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    right: 0;
+    max-width: 550px;
+    height: 56px;
+    display: flex;
+    align-items: center;
 }
 .head-col-center {
   flex-direction: column;
@@ -24,9 +56,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.head-col-left, .head-col-right {
+  max-width: 62px;
+  flex: 1 1;
+}
+.head-logo, .head-logo-sm {
+  width: 66px;
+  height: 30px;
+  cursor: pointer;
+}
+.head-logo-sm svg, .head-logo svg {
+  width: 66px;
+  height: 34px;
+  transform: rotate(7deg);
+}
 .head-subtitle {
   font-size: 12px;
   display: flex;
+}
+.head-subtitle .timer {
+  margin-left: 2px;
+}
+.mobile-wrap {
+  overflow-x: hidden;
 }
 .burger-menu-backdrop {
   position: fixed;
@@ -53,21 +106,22 @@
   padding: 0 0 20px;
 }
 .quiz-banner {
-  position: relative;
-  width: 100%;
-  height: 100%; /* Ensure the parent has height */
-  overflow: hidden;
-  display: flex; /* Helps align children within the container */
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0; /* Optional: Adds a background in case image doesn't fully fill the area */
+  margin-bottom: 20px;
+    background-color: #ebebeb;
+    min-height: 280px;
+    max-height: 66.67%;
 }
 
+.lqquizdetails.is_fade .quiz-banner, .lqquizdetails.is_fade .quiz-youtubeembed {
+  overflow: visible;
+}
 .quiz-image {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Prevents cropping and maintains aspect ratio */
+  max-height: 309px;
+    width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .img-border {
@@ -82,12 +136,12 @@
 .quiz-subtitle {
   font-size: 24px;
   line-height: 1.4;
-  font-family: SFProDisplay-Medium;
+  /* font-family: SFProDisplay-Medium; */
   color: #fff;
   padding: 0 16px;
   text-align: center;
   position: relative;
-  margin: 4px;
+  /* margin: 4px; */
 }
 .quiz-subtitle .rules-modal-trigger {
   font-size: 12px;
@@ -129,15 +183,9 @@
 
 .quiz-content-box.sm .quiz-content-heading {
   font-size: 12px;
-  font-family: SFProDisplay-Regular;
+  /* font-family: SFProDisplay-Regular; */
 }
-.live-quiz-tab {
-  border-bottom: 1px solid #0e2c50;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "SFProDisplay-Regular";
-}
+
 
 .live-quiz-tab ul {
   display: flex;
@@ -177,8 +225,8 @@
 }
 .tab-group ul li span {
   color: #707070;
-  font-size: 14px;
-  font-family: SFProDisplay-Bold;
+  font-size: 12px;
+  /* font-family: SFProDisplay-Bold; */
   text-transform: uppercase;
   padding: 15px 0;
   display: inline-block;
@@ -191,6 +239,14 @@
 .tab-group ul li.active {
   font-weight: bold;
   border-bottom: 3px solid red;
+}
+.live-quiz-tab {
+  border-bottom: 1px solid #0e2c50;
+}
+.live-quiz-tab ul li {
+  flex-grow: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .row {
   display: flex;
@@ -222,8 +278,17 @@
   .contest-listing-card-header {
   background: transparent;
   margin: 0;
-  padding: 15px 0 15px 48px;
+  padding: 15px 0 15px 38px;
   display: flex;
+  position: relative;
+}
+.contest-list-wrapper .contest-listing-card .contest-listing-card-header img.contest-img {
+  position: absolute;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  top: 48%;
+  transform: translateY(-50%);
 }
 .contest-listing-new
   .contest-list-wrapper
@@ -270,13 +335,18 @@
 /* contest box */
 
 .contest-list {
-  background-color: #102545;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  width: 450px;
+  padding: 16px 35px;
+  position: relative;
+  border-radius: 12px;
+    background: #0e2c50;
+    margin-bottom: 45px;
+  /* width: 450px; */
+  transition: box-shadow .3s ease-in-out;
 }
-
+.contest-list-wrapper .contest-listing-card .contest-list {
+  position: relative;
+  z-index: 1;
+}
 .featured-icon-wrap {
   display: flex;
   align-items: center;
@@ -289,8 +359,10 @@
 }
 
 .win-type {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .icon-share-arrow {
@@ -301,12 +373,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .prize-pool-l {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+}
+
+.pool-with-prize-r .entry-txt {
+  color: #fff;
+  font-size: 8px;
+  margin-right: 5px;
+  font-weight: 400;
+  /* font-family: SFProDisplay-Regular; */
+  letter-spacing: .08px;
+}
+.contest-list .entry-criteria .btn {
+  /* font-family: SFProDisplay-Medium; */
+  min-width: 66px;
+  padding: 0 7px;
+  border-radius: 6px;
+  font-size: 10px;
+  height: 22px;
+  background: #e70908;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all .6s cubic-bezier(.165,.84,.44,1);
 }
 
 .entry-criteria {
@@ -330,11 +423,12 @@
 
 .btnStyle:hover {
   background-color: #ff4d4d;
+  transform: scale(1.06);
 }
 
 .progress-bar-default {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .progress {
@@ -342,7 +436,21 @@
   border-radius: 12px;
   height: 6px;
   position: relative;
-  margin: 10px;
+  margin: 10px 0;
+  transition: width .6s ease;
+}
+.LQ-contest-list-view .progress-bar-default .progress {
+  width: 100%;
+  border: 1px solid #a9a9a9;
+  background-color: initial;
+  box-shadow: none;
+  border-radius: 4px;
+  height: 10px;
+}
+.contest-list-wrapper .contest-list .progress-bar-default .progress-bar-value {
+  font-size: 10px;
+  /* font-family: SFProDisplay-Regular; */
+  color: #fff;
 }
 
 .progress-bar {
@@ -369,4 +477,40 @@
 .progress-bar-value {
   display: flex;
   justify-content: space-between;
+}
+
+
+.featured-icon-wrap {
+  position: absolute;
+  top: 16px;
+  right: 40px;
+}
+.contest-list .contest-heading h3 {
+  font-size: 16px;
+  /* font-family: SFProDisplay-Regular; */
+  color: #fff;
+  margin: 0;
+  position: relative;
+}
+
+.contest-listing-new .featured-icon.new-featured-icon{
+    font-size: 8px;
+    /* font-family: SFProDisplay-Bold; */
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 3px 4px 1px;
+ 
+}
+.contest-list .contest-heading .win-type .icon-share-arrow {
+  top: -3px;
+  right: -20px;
+  position: absolute !important;
+  background: hsla(0, 0%, 100%, .2);
+  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  padding: 3px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
 }

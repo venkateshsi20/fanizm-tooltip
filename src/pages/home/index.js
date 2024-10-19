@@ -136,6 +136,7 @@ function Home() {
       <div className="routing-550">
         <div className="web-body-container">
           <Header />
+          <div className="swiper-wrap">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
@@ -146,7 +147,7 @@ function Home() {
               disableOnInteraction: false,
             }}
             loop={true}
-            style={{ height: "150px" }}
+            style={{ height: "146px" }}
           >
             <SwiperSlide>
               <img
@@ -154,6 +155,7 @@ function Home() {
                 alt="Banner 1"
                 className="swiper-image"
               />
+              <div className="slider-backdrop"></div>
             </SwiperSlide>
             <SwiperSlide>
               <img
@@ -161,6 +163,7 @@ function Home() {
                 alt="Banner 2"
                 className="swiper-image"
               />
+              <div className="slider-backdrop"></div>
             </SwiperSlide>
             <SwiperSlide>
               <img
@@ -168,16 +171,19 @@ function Home() {
                 alt="Banner 3"
                 className="swiper-image"
               />
+              <div className="slider-backdrop"></div>
             </SwiperSlide>
           </Swiper>
+          </div>
 
           {/* Movie Sections */}
           <MovieSection title="Movies" movies={movies} />
           <MovieSection title="Trailers" movies={trailers} />
 
-          {/* Footer */}
-          <Footer />
+         {/* Footer */}
         </div>
+         
+         <Footer />
       </div>
     </div>
   );

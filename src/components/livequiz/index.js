@@ -38,7 +38,7 @@ const LiveQuiz = () => {
       >
         <div className="routing-550">
           <div className="web-body-container pb0">
-            <div className="quiz-header">
+            <div className="header quiz-header">
               <div className="head-col-left">
                 <i className="head-action-btn icon-left-arrow"></i>
               </div>
@@ -225,39 +225,7 @@ const LiveQuiz = () => {
                                     <div>
                                       <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body">
                                         <div className="contest-list-header">
-                                          <div className="contest-heading">
-                                            <div className="contest-row">
-                                              <h3 className="win-type">
-                                                <span className="position-relative">
-                                                  <span>Test your skills</span>
-                                                </span>
-                                                <i className="icon-share-arrow"></i>
-                                              </h3>
-                                              <div className="featured-icon-wrap">
-                                                <span className="featured-icon new-featured-icon gau-feat">
-                                                  <i className="icon-checked"></i>{" "}
-                                                  guaranteed
-                                                </span>
-                                              </div>
-                                            </div>
-
-                                            <div className="max-prize-pool pool-with-prize-r">
-                                              <div className="prize-pool-l">
-                                                Practise Contest
-                                              </div>
-                                              <div className="display-table-cell v-mid position-relative entry-criteria">
-                                                <span className="entry-txt">
-                                                  Entry Ticket
-                                                </span>
-                                                <button
-                                                  type="button"
-                                                  className="white-base btnStyle btn-rounded btn btn-primary"
-                                                >
-                                                  Free
-                                                </button>
-                                              </div>
-                                            </div>
-                                          </div>
+                                        <div class="contest-heading"><div class="featured-icon-wrap"><span class="featured-icon new-featured-icon gau-feat"><i class="icon-checked"></i> guaranteed</span></div><h3 class="win-type"><span class="position-relative"><span>Practice contests</span></span><i class="icon-share-arrow"></i></h3><div class="max-prize-pool pool-with-prize-r"><div class="prize-pool-l"> Practise Contest</div><div class="display-table-cell v-mid position-relative entry-criteria"><span class="entry-txt">Entry Ticket</span> <button type="button" class="white-base btnStyle btn-rounded    btn btn-primary">Free</button></div></div></div>
                                           <div className="display-table d-flex top-btm-10px">
                                             <div className="progress-bar-default display-table-cell v-mid">
                                               <div className="progress">

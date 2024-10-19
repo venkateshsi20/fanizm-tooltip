@@ -3,6 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
+    <>
     <header className="header">
       <div className="logo">
         <img
@@ -71,6 +72,8 @@ const Header = () => {
         <div class="head-action-btn no-bg icon-qr"></div>
       </div>
     </header>
+    <div class="default-header-placeholder"></div>
+    </>
   );
 };
 
