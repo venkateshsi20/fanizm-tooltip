@@ -9,6 +9,8 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
     };
   }, []);
   return (
+   
+
     <div className="overlay">
       <div className="overlay__wrap">
         <div className="overlay__content">
