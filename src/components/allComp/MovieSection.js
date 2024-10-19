@@ -1,8 +1,9 @@
 // src/components/MovieSection.js
 import React from "react";
 import MovieCard from "./MovieCard";
+import Tippy from "@tippyjs/react";
 
-const MovieSection = ({ title, movies }) => {
+const MovieSection = ({ title, movies, step, setStep, isHighlight }) => {
   return (
     <section className="movie-section">
       <div className="section-header">
@@ -10,16 +11,32 @@ const MovieSection = ({ title, movies }) => {
         {/* <span className="view-all">View All</span> */}
       </div>
       <div className="movie-grid">
-        {movies.map((movie, index) => (
-          <MovieCard
-            key={index}
-            title={movie.title}
-            time={movie.time}
-            imageUrl={movie.imageUrl}
-            id={movie.id}
-            coverImg={movie.coverImg}
-          />
-        ))}
+        {movies.map((movie, index) => {
+          let isHighlighted = index === 1 && step === 3; // Check if this movie should be highlighted
+
+          return (
+            <Tippy
+              key={movie.id} // Unique id for Tippy
+              theme="custom"
+              animation="fade"
+              visible={true}
+              content={isHighlighted ? "This is a highlighted movie!" : ""}
+              disabled={!isHighlighted} // Disable tooltip when not highlighted
+            >
+              <div>
+                <MovieCard
+                  title={movie.title}
+                  time={movie.time}
+                  imageUrl={movie.imageUrl}
+                  id={movie.id}
+                  coverImg={movie.coverImg}
+                  isHighlighted={isHighlighted}
+                />
+              </div>
+            </Tippy>
+          );
+        })}
+        {isHighlight ? <div className="movie-overlay" /> : null}
       </div>
     </section>
   );

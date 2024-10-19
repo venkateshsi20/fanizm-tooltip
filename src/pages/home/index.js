@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "../../App.css";
@@ -7,9 +7,11 @@ import Footer from "../../components/allComp/Footer";
 import Header from "../../components/allComp/Header";
 import { Autoplay } from "swiper/modules";
 import Overlay from "../../components/allComp/Overlay";
-import "tippy.js/dist/tippy.css";
+// import "tippy.js/dist/tippy.css";
 
 function Home() {
+  const [step, setStep] = useState(1);
+
   // Sample movie data
   const movies = [
     {
@@ -129,13 +131,25 @@ function Home() {
           </div>
 
           {/* Movie Sections */}
-          <MovieSection title="Movies" movies={movies} />
-          <MovieSection title="Trailers" movies={trailers} />
+          <MovieSection
+            title="Movies"
+            movies={movies}
+            step={step}
+            setStep={setStep}
+            isHighlight={step == 3}
+          />
+          <MovieSection
+            title="Trailers"
+            movies={trailers}
+            step={0}
+            setStep={setStep}
+            isHighlight={step == 3}
+          />
 
           {/* Footer */}
         </div>
 
-        <Footer />
+        <Footer step={step} setStep={setStep} />
       </div>
     </div>
   );

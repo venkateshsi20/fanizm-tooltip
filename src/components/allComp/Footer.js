@@ -5,12 +5,13 @@ import { FaHome, FaUser, FaBell } from "react-icons/fa"; // Icons used for the f
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
-const Footer = () => {
+const Footer = ({ step, setStep }) => {
   const navigate = useNavigate();
   const [showNevigation, setShowNevigation] = useState(false);
   const [navId, setnavId] = useState(1);
   const handlenevigation = () => {
     setShowNevigation(!showNevigation);
+    setStep(step + 1);
   };
   const handleNavClick = (id, path) => {
     setShowNevigation(!showNevigation);
@@ -18,6 +19,7 @@ const Footer = () => {
     if (path) {
       navigate(path);
     }
+    setStep(step + 1);
   };
   const navbar = [
     {
@@ -236,17 +238,17 @@ const Footer = () => {
           </div>
         </a>
       </div>
-      <div className={`footer-quiz-modes  ${!showNevigation ? ".no-bg" : ""} `}>
-        {!showNevigation && <div className="overlay"></div>}
+      <div className={`footer-quiz-modes`}>
+        {step == 1 && <div className="overlay"></div>}
         <Tippy
           content="This is a customized tooltip"
           theme="custom"
           animation="fade"
-          visible={!showNevigation}
+          visible={step == 1}
         >
           <a
             className={`quiz-modes-handler ${
-              !showNevigation ? "highlighted-element" : ""
+              step == 1 ? "highlighted-element" : ""
             }`}
             onClick={() => {
               handlenevigation();
@@ -317,7 +319,7 @@ const Footer = () => {
                       content="This is a customized tooltip"
                       theme="custom"
                       animation="fade"
-                      visible={true}
+                      visible={step == 2}
                     >
                       <a
                         className="qm-nav-item mega selected active"
@@ -327,10 +329,8 @@ const Footer = () => {
                           i == 0 && handleNavClick(nav.id, nav.path);
                         }}
                         style={{
-                          // backgroundColor: "#E02020",
-                          color: "#fff",
-                          position: "relative",
-
+                          // color: "#fff",
+                          // position: "relative",
                           border: "2px solid yellow" /* Custom border color */,
                           borderRadius: "8px" /* Rounded corners */,
                           boxShadow:

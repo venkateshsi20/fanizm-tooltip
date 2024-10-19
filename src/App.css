@@ -918,3 +918,34 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+.movie-cards-container {
+  position: relative; /* For positioning overlay */
+  display: flex;
+  flex-direction: column; /* Adjust as necessary for layout */
+  gap: 20px; /* Space between cards */
+}
+
+.movie-card {
+  border: 1px solid #ccc; /* Basic border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Clip content */
+  position: relative; /* For absolute positioning of child elements */
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.highlighted {
+  border: 2px solid yellow; /* Highlight color */
+  /* transform: scale(1.1); Slight scaling effect */
+  z-index: 1; /* Bring highlighted card above others */
+}
+
+.movie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
