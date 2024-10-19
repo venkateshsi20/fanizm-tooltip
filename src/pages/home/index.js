@@ -7,6 +7,7 @@ import Footer from "../../components/allComp/Footer";
 import Header from "../../components/allComp/Header";
 import { Autoplay } from "swiper/modules";
 import Overlay from "../../components/allComp/Overlay";
+import "tippy.js/dist/tippy.css";
 
 function Home() {
   // Sample movie data
