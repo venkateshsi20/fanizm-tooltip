@@ -6,7 +6,8 @@ const AppLayout = lazy(() =>
   import(/* webpackChunkName: "AppLayout" */ "../components/applayout")
 );
 const Home = lazy(() => import(/* webpackChunkName: "home" */ "../pages/home"));
-const View = lazy(() => import(/* webpackChunkName: "home" */ "../pages/view"));
+const AddFund = lazy(() => import(/* webpackChunkName: "home" */ "../pages/addFund"));
+const PaymentMethod = lazy(() => import(/* webpackChunkName: "home" */ "../pages/paymentMethod"));
 
 const childRoutes = [
   {
@@ -26,10 +27,18 @@ const childRoutes = [
     ),
   },
   {
-    path: "/view",
+    path: "/add-fund",
     element: (
       <Suspense fallback={"loading..."}>
-        <View />
+        <AddFund />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/payment-method",
+    element: (
+      <Suspense fallback={"loading..."}>
+        <PaymentMethod />
       </Suspense>
     ),
   },

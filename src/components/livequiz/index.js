@@ -18,17 +18,17 @@ const LiveQuiz = () => {
     { id: 2, label: "My Contest" },
   ];
   const upcomingContest = [
-    {
-      id: 1,
-      contestType: "MEGA CONTEST",
-      contestDes: "Enter the hottest contest with mega prize.",
-      type: "Practice Contest",
-      heading: "Practice Contest",
-      entry: "Entry Ticket",
-      buttonType: "free",
-      left: 5,
-      slots: 10,
-    },
+    // {
+    //   id: 1,
+    //   contestType: "MEGA CONTEST",
+    //   contestDes: "Enter the hottest contest with mega prize.",
+    //   type: "Practice Contest",
+    //   heading: "Practice Contest",
+    //   entry: "Entry Ticket",
+    //   buttonType: "free",
+    //   left: 5,
+    //   slots: 10,
+    // },
     {
       id: 2,
       contestType: "HEAD TO HEAD",
@@ -36,9 +36,9 @@ const LiveQuiz = () => {
       type: "Fast filling!",
       heading: "Practice Contest",
       entry: "Entry Ticket",
-      buttonType: "free",
-      left: 7,
-      slots: 10,
+      buttonType: "₹ 55",
+      left: 1,
+      slots: 2,
     },
   ];
   const myContest = [
@@ -466,18 +466,18 @@ const LiveQuiz = () => {
       {joinContestOverlay && (
         <Overlay
           handleJoinContestOverlay={handleJoinContestOverlay}
-          handleViewContestOverlay={handleViewContestOverlay}
+          // handleViewContestOverlay={handleViewContestOverlay}
           quizData={quizData}
         />
       )}
-
+{/* 
       {viewContestOverlay && (
         <ViewOverlay
           handleJoinContestOverlay={handleJoinContestOverlay}
           handleViewContestOverlay={handleViewContestOverlay}
           setActiveTab={setActiveTab}
         />
-      )}
+      )} */}
     </>
   );
 };

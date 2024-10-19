@@ -7,7 +7,7 @@ export const routes = {
   view: {
     id: "1",
     name: "View",
-    path: `/`,
+    path: `/add-fund`,
   },
 };
 

@@ -957,6 +957,22 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+
   background: rgba(0, 0, 0, 0.5);
-  /* z-index: 4; */
+}
+/* z-index: 4; */
+.amount-option {
+  display: inline-block;
+  width: calc(33.33333% - 6.66667px);
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  color: #555;
+  font-family: SFProDisplay-Bold;
+  padding: 4px 4px 2px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 3px;
 }
