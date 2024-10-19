@@ -976,3 +976,320 @@ body {
   position: relative;
   margin: 3px;
 }
+
+.burger-menu {
+  background-color: #0b091c;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 375px;
+  height: auto;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, .3);
+  z-index: 1000;
+  transition: transform .3s ease-out;
+  display: flex;
+  z-index: 99999;
+}
+.web-container.web-container-fixed {
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
+.web-body-container.pb0 .web-container {
+  min-height: calc(100vh - 56px);
+}
+.web-container {
+  max-width: 550px;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  width: 100%;
+  background: #0b091c;
+  overflow-y: auto;
+}
+.add-funds-header {
+  padding: 0 30px;
+}
+.add-funds-header {
+  z-index: 1;
+  position: relative;
+}
+.add-funds-header .form-group.show-currency-icn {
+  z-index: 1;
+  border-bottom: 1px solid #4d4b59;
+}
+.add-funds-header .form-group {
+  margin-bottom: 0;
+  position: relative;
+  top: 24px;
+}
+.position-relative {
+  position: relative !important;
+}
+.add-funds-header label {
+  color: #fff;
+  font-size: 12px;
+  /* font-family: SFProDisplay-Bold; */
+  margin-bottom: 0;
+}
+.input-cls, label {
+  transition: all .2s;
+  touch-action: manipulation;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(2.9385rem + 2px);
+  padding: .813rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.add-funds-header .form-control {
+  border-radius: 0;
+  font-size: 16px;
+  color: #fff;
+  /* font-family: SFProDisplay-Bold; */
+  padding: 15px 20px;
+  height: 50px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: initial;
+  box-shadow: none ;
+}
+input {
+  border-color: #eaeaea;
+}
+button, input {
+  overflow: visible;
+}
+.add-funds-header .form-control {
+  border-radius: 0;
+  font-size: 16px;
+  color: #fff;
+  /* font-family: SFProDisplay-Bold; */
+  padding: 15px 20px;
+  height: 50px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: initial;
+  box-shadow: none !important;
+}
+.add-funds-header .form-group.show-currency-icn .form-control {
+  padding-left: 20px;
+}
+.add-funds-header .form-group.show-currency-icn .form-control {
+  padding-left: 20px;
+}
+.add-funds-header .forminput-currency {
+  padding-left: 0;
+  color: #fff;
+}
+.add-funds-header .form-group {
+  margin-bottom: 0;
+  position: relative;
+  top: 24px;
+}
+.add-funds-header .form-group.show-currency-icn {
+  z-index: 1;
+  border-bottom: 1px solid #4d4b59;
+}
+.add-funds-body {
+  padding: 50px 30px 30px;
+}
+.amount-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.dpst-summary .dpst-heading {
+  font-size: 12px;
+  /* font-family: SFProDisplay-Bold; */
+}
+.dpst-summary .dpst-inner {
+  padding: 15px 0 0;
+}
+.dpst-summary .dpst-amt {
+  margin-bottom: 15px;
+}
+.dpst-summary .dpst-amt, .dpst-summary .dpst-gst, .dpst-summary .dpst-total {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.d-flex {
+  display: flex !important;
+}
+.dpst-summary .amt-txt {
+  font-size: 12px;
+  color: #fff;
+}
+.dpst-summary .amt-val {
+  font-size: 12px;
+  color: #f0f0f0;
+}
+.dpst-summary .dpst-total {
+  border-top: 1px solid hsla(0, 0%, 100%, .32);
+  margin-top: 15px;
+  padding-top: 15px;
+  font-family: SFProDisplay-Bold;
+  color: #fff;
+}
+.dpst-total .inclusive-label {
+  text-transform: capitalize;
+}
+.dpst-summary .dpst-total .tot-val {
+  color: #fff;
+  font-size: 14px;
+}
+.gst-number-view {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.gst-number-view .gst-checkbox-view {
+  display: flex;
+  align-items: center;
+}
+.gst-number-view .gst-checkbox-view .checkbox-view {
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none !important;
+}
+.gst-number-view .gst-checkbox-view .checkbox-view i {
+  font-size: 8px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.gst-number-view .gst-checkbox-view span {
+  margin-left: 11px;
+  font-size: 14px;
+  color: #fff !important;
+}
+.icon-tick-ic:before {
+  content: "\E985";
+}
+.gst-number-view .gst-input-view {
+  margin-top: 10px;
+}
+.gst-number-view .gst-input-view .form-group {
+  border-bottom: 1px solid #4d4b59;
+}
+.gst-number-view .gst-input-view .form-control {
+  padding: .813rem 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background-color: initial;
+  font-family: SFProDisplay-Medium;
+  box-shadow: none;
+}
+.gst-number-view .gst-checkbox-view .checkbox-view.checked {
+  background-color: #e70908 !important;
+}
+.promo-code-section {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 14px;
+  cursor: pointer;  
+  font-weight: 700;
+  color: #000;
+}
+.add-funds-body .promo-code-section {
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.add-funds-body .promo-code-section .apply-promocode {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.promo-code-section .apply-promocode {
+  margin-left: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+.add-funds-body .promocode {
+  position: relative;
+}
+.promo-code-section .promocode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.add-funds-body .promocode .form-group {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.add-funds-body .promocode .form-control {
+  border: 1px solid hsla(0, 0%, 100%, .32);
+  background-color: #0e2c50;
+  border-radius: 12px;
+  padding: 10px 80px 10px 15px;
+  height: 50px;
+  color: #fff;
+}
+.add-funds-body .promo-code-section .promocode .form-control {
+  border: none;
+  box-shadow: 0 0 0 1px #66779a;
+  background: #12386b;
+  min-height: 60px;
+}
+.add-funds-body .promocode .btn-apply {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.text-center {
+  text-align: center !important;
+}
+.button.button-primary-rounded {
+  padding: 12px 30px 11px;
+  border-radius: 24px;
+}
+.add-funds-body .button-block {
+  max-width: 315px;
+  margin: 0 auto;
+  background: #e70908;
+  border-radius: 6px;
+}
+.button.button-block {
+  display: block;
+  width: 256px;
+}
+.forminput-currency {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  font-size: 20px;
+  color: #fff;
+
+}
