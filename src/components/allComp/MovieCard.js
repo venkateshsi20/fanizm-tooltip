@@ -31,7 +31,7 @@ const MovieCard = ({ title, time, imageUrl, id, coverImg, isHighlighted }) => {
         <div className="winning ">
           <FaTrophy className="movie-trophy-icon" />
 
-          <span className="primary-color">Prizes</span>
+          <span className="primary-color">₹ 55</span>
         </div>
       </div>
     </div>

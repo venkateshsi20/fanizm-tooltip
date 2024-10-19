@@ -426,11 +426,11 @@ const Footer = ({ step, setStep }) => {
                       <div className="qmvi-content">
                         <div className="title">{nav.title}</div>
                       </div>
-                      {navId === nav.id ? (
+                      {/* {navId === nav.id ? (
                         <div className="qmvi-checked"></div>
                       ) : (
                         <div className="qmvi-checked"></div>
-                      )}
+                      )} */}
                     </a>
                   )}
                 </>
