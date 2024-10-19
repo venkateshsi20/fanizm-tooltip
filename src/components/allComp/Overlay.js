@@ -6,6 +6,8 @@ const Overlay = () => {
   
 
   return (
+    <>
+    { false ? 
     <div className="overlay">
     <div className="overlay__wrap">
         <div className="overlay__content">
@@ -51,6 +53,9 @@ const Overlay = () => {
       </div>
     </div>
     </div>
+    : null
+    }
+    </>
   );
 };
 
