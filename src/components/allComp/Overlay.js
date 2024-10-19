@@ -1,13 +1,13 @@
 // Overlay.js
 import React, { useEffect } from "react";
 
-const Overlay = ({ handleJoinContestOverlay }) => {
-//   useEffect(() => {
-//     document.body.style.overflow = "hidden";
-//     return () => {
-//       document.body.style.overflow = "auto";
-//     };
-//   }, []);
+const Overlay = ({ handleJoinContestOverlay, quizData }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <div className="overlay">
       <div className="overlay__wrap">
@@ -36,7 +36,7 @@ const Overlay = ({ handleJoinContestOverlay }) => {
             <div class="mt20 row">
               <div class="col-xs-12">
                 <div class="confirm-quiz-heading">
-                  <div class="quiz-name">Hanuman movie</div>
+                  <div class="quiz-name">{quizData.title}</div>
                   <div class="winning-amt">
                     <span>Win</span> Prizes
                   </div>

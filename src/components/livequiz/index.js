@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./livequiz.css";
+import "../../App.css";
 import { useLocation } from "react-router-dom";
 import Overlay from "../allComp/Overlay";
 
