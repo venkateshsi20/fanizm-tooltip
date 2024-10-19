@@ -56,6 +56,7 @@ import MovieSection from "../../components/allComp/MovieSection";
 import Footer from "../../components/allComp/Footer";
 import Header from "../../components/allComp/Header";
 import { Autoplay } from "swiper/modules";
+import Overlay from "../../components/allComp/Overlay";
 
 function Home() {
   // Sample movie data
@@ -184,8 +185,11 @@ function Home() {
         </div>
          
          <Footer />
+         <Overlay/>
       </div>
     </div>
+
+    
   );
 }
 
