@@ -342,6 +342,11 @@ body {
     margin-bottom: 45px;
   /* width: 450px; */
   transition: box-shadow .3s ease-in-out;
+  @media only screen and (max-width : 400px){
+    padding: 16px 16px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .contest-list-wrapper .contest-listing-card .contest-list {
   position: relative;

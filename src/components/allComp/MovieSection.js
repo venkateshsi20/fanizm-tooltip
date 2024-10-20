@@ -2,10 +2,35 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 import Tippy from "@tippyjs/react";
+import Tabs from "./Tab";
+import FilterDropdown from "./FilterDropdown";
 
 const MovieSection = ({ title, movies, step, setStep, isHighlight }) => {
+
+  const options = ['Option 1', 'Option 2', 'Option 3'];
+
+  const handleFilterChange = (option) => {
+    console.log('Selected option:', option);
+  };
+
+  const tabs = [
+    { id: 'tab1', label: 'Tab 1', content: 'Content for Tab 1' },
+    { id: 'tab2', label: 'Tab 2', content: 'Content for Tab 2' },
+    { id: 'tab3', label: 'Tab 3', content: 'Content for Tab 3' },
+  ];
   return (
+    <>
+    <div className="filter-container">
+    <div className="tabs-wrap">
+      <Tabs tabs={tabs} />
+      </div>
+      <div className="filter-wrap">
+      <FilterDropdown options={options} onFilterChange={handleFilterChange} />
+      </div>
+      </div>
     <section className="movie-section">
+
+      
       <div className="section-header">
         <h3>{title}</h3>
         <span className="view-all">View All</span>
@@ -40,6 +65,8 @@ const MovieSection = ({ title, movies, step, setStep, isHighlight }) => {
         {isHighlight ? <div className="movie-overlay" /> : null}
       </div>
     </section>
+
+    </>
   );
 };
 

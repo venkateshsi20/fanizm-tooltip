@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React from "react";
-
+import { FaQrcode } from "react-icons/fa"; // Icons used for the footer
 const Header = () => {
   return (
     <>
@@ -69,7 +69,9 @@ const Header = () => {
             </span>
             300
           </div>
-          <div className="head-action-btn no-bg icon-qr"></div>
+          <div className="head-action-btn no-bg icon-qr">
+          <FaQrcode className="header-icon" />
+          </div>
         </div>
       </header>
       <div className="default-header-placeholder"></div>

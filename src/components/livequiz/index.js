@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import Overlay from "../allComp/Overlay";
 import ViewOverlay from "../allComp/ViewOverlay";
 import Tippy from "@tippyjs/react";
+import { FaArrowLeft,FaQrcode } from "react-icons/fa";
 
 const LiveQuiz = () => {
   const location = useLocation();
@@ -83,7 +84,7 @@ const LiveQuiz = () => {
           <div className="web-body-container pb0">
             <div className="header quiz-header">
               <div className="head-col-left">
-                <i className="head-action-btn icon-left-arrow"></i>
+                <FaArrowLeft className="head-action-btn icon-left-arrow" />
               </div>
               <div className="head-col-center">
                 <div className="head-logo">
@@ -167,7 +168,8 @@ const LiveQuiz = () => {
                 </span>
               </div>
               <div className="head-col-right">
-                <i className="head-action-btn icon-qr"></i>
+                
+                <FaQrcode className="head-action-btn icon-qr" />
                 <div className=""></div>
               </div>
             </div>
@@ -239,7 +241,7 @@ const LiveQuiz = () => {
                           </ul>
                         </div>
                         <div className="row">
-                          <div className="col-sm-12">
+                          <div className="col-sm-12 w-100">
                             <div className="infinite-scroll-component__outerdiv">
                               <div
                                 className="infinite-scroll-component"

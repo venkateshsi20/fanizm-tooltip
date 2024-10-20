@@ -188,7 +188,9 @@ body {
 }
 
 .view-all {
-  color: red;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .movie-grid {
@@ -299,8 +301,8 @@ body {
   border-radius: 100%;
   margin-right: 3px;
 }
-.icon-qr:before {
-  content: "\EA12";
+.icon-qr svg {
+  margin-top: 6px;
 }
 
 .default-header.padding-h-15 {
@@ -1434,4 +1436,127 @@ input {
   position: relative;
   z-index: 1;
   cursor: pointer;
+}
+
+.card-label {
+  position: absolute;
+  top: 0;
+  background: #e70908;
+  font-size: 8px;
+  padding: 0 4px;
+  margin: 5px 5px;
+  border-radius: 2px;
+}
+
+/* Tabs.css */
+.tabs {
+  overflow: hidden;
+}
+
+.tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+
+.tab-item {
+  padding: 1px 8px;
+  cursor: pointer;
+  background: #2e313a;
+  transition: background 0.3s;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.tab-item:hover {
+  background: #e70908;
+}
+
+.tab-item.active {
+  background: #e70908;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #0e2c50;
+  color: white;
+  padding: 3px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  /* width: 200px; */
+}
+
+.arrow {
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+  font-size: 8px;
+}
+
+.arrow.open {
+  transform: rotate(180deg); /* Rotate when dropdown is open */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  right: 0;
+  background-color: #2e313a;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 110px;
+}
+
+.dropdown-item {
+  padding: 7px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dropdown-item:hover {
+  background-color: #e70908;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 16px;
+}
+.head-col-left, .head-col-right {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  background-color: hsla(0, 0%, 100%, .2);
+  box-shadow: 0 10px 20px 0 rgba(255, 184, 73, .2);
+  max-width: 30px;
+}
+.w-100 {
+  width: 100%;
 }

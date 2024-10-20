@@ -1,7 +1,7 @@
 // src/components/Footer.js
 import React, { useState } from "react";
 // import "./Footer.css";
-import { FaHome, FaUser, FaBell } from "react-icons/fa"; // Icons used for the footer
+import { FaHome, FaUser, FaBell, FaTrophy, FaGift, FaClock, FaQrcode } from "react-icons/fa"; // Icons used for the footer
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
@@ -274,19 +274,19 @@ const Footer = ({ step, setStep }) => {
         </a>
 
         <a className="footer-item ">
-          <FaUser className="footer-icon" />
+          <FaTrophy className="footer-icon" />
           <div className="footer-label">
             <span>My Contest</span>
           </div>
         </a>
         <a className="footer-item ">
-          <FaBell className="footer-icon" />
+          <FaGift className="footer-icon" />
           <div className="footer-label">
             <span>Merchandise</span>
           </div>
         </a>
         <a className="footer-item ">
-          <FaBell className="footer-icon" />
+          <FaClock className="footer-icon" />
           <div className="footer-label">
             <span>UpComing</span>
           </div>

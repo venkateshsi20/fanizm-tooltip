@@ -3,6 +3,7 @@ import "../addFund";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
+import { FaArrowLeft } from "react-icons/fa";
 const AddFund = () => {
   const nevigate = useNavigate();
   return (
@@ -21,7 +22,7 @@ const AddFund = () => {
           <div className="web-body-container pb0">
             <div className="header quiz-header">
               <div className="head-col-left">
-                <i className="head-action-btn icon-left-arrow"></i>
+              <FaArrowLeft className="head-action-btn icon-left-arrow" />
               </div>
 
               <div className="head-col-center">
