@@ -122,7 +122,7 @@ const AddFund = () => {
                       <div className="btn-apply">Apply</div>
                     </div>
                   </div>
-                  <div className="text-center add-fund">
+                  <div className="text-center add-fund highlighted">
                     <Tippy
                       theme="custom"
                       animation="fade"
@@ -130,16 +130,14 @@ const AddFund = () => {
                       content={"This is a highlighted movie!"}
                     >
                       <a
-                        className="button button-primary-rounded button-block"
+                        className="button button-primary-rounded button-block btn-add-cash"
                         onClick={() => {
                           nevigate("/payment-method");
                         }}
-                        style={{ zIndex: 10000000000 }}
                       >
                         Add Cash
                       </a>
                     </Tippy>
-                    <div className="quiz-overlay" />
                   </div>
                 </div>
               </div>
@@ -147,6 +145,7 @@ const AddFund = () => {
           </div>
         </div>
       </div>
+      <div className="footer-overlay "></div>
     </>
   );
 };

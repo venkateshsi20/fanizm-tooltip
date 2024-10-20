@@ -100,7 +100,7 @@ body {
   overflow: hidden;
   position: relative;
   justify-content: center;
-    display: flex;
+  display: flex;
 }
 .swiper-wrap {
   margin: 10px 0 20px;
@@ -391,7 +391,7 @@ body {
   height: 28px;
   background-color: #0e2c50;
 }
-a.quiz-modes-handler.highlighted-element:before{
+a.quiz-modes-handler.highlighted-element:before {
   background-color: transparent;
 }
 
@@ -888,6 +888,7 @@ a.quiz-modes-handler.highlighted-element:before{
 
 .tippy-box[data-theme~="custom"][data-placement^="top"] .tippy-arrow {
   border-top-color: #e70908;
+  color: #e70908;
 }
 
 .tippy-arrow {
@@ -958,11 +959,11 @@ a.quiz-modes-handler.highlighted-element:before{
 
 .quiz-overlay {
   position: fixed;
-    top: -50%;
-    left: 0;
-    width: 100vw;
-    height: 150%;
-    background: rgba(0, 0, 0, 0.5);
+  top: -50%;
+  left: 0;
+  width: 100vw;
+  height: 150%;
+  background: rgba(0, 0, 0, 0.5);
 }
 /* z-index: 4; */
 .amount-option {
@@ -993,9 +994,9 @@ a.quiz-modes-handler.highlighted-element:before{
   width: 100%;
   max-width: 375px;
   height: auto;
-  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
   display: flex;
   z-index: 99999;
 }
@@ -1041,22 +1042,23 @@ a.quiz-modes-handler.highlighted-element:before{
   /* font-family: SFProDisplay-Bold; */
   margin-bottom: 0;
 }
-.input-cls, label {
-  transition: all .2s;
+.input-cls,
+label {
+  transition: all 0.2s;
   touch-action: manipulation;
 }
 .form-control {
   display: block;
   width: 100%;
   height: calc(2.9385rem + 2px);
-  padding: .813rem;
-  font-size: .875rem;
+  padding: 0.813rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: #495057;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 8px;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .add-funds-header .form-control {
   border-radius: 0;
@@ -1069,12 +1071,13 @@ a.quiz-modes-handler.highlighted-element:before{
   -webkit-appearance: none;
   appearance: none;
   background-color: initial;
-  box-shadow: none ;
+  box-shadow: none;
 }
 input {
   border-color: #eaeaea;
 }
-button, input {
+button,
+input {
   overflow: visible;
 }
 .add-funds-header .form-control {
@@ -1129,7 +1132,9 @@ button, input {
 .dpst-summary .dpst-amt {
   margin-bottom: 15px;
 }
-.dpst-summary .dpst-amt, .dpst-summary .dpst-gst, .dpst-summary .dpst-total {
+.dpst-summary .dpst-amt,
+.dpst-summary .dpst-gst,
+.dpst-summary .dpst-total {
   flex-direction: row;
   justify-content: space-between;
 }
@@ -1145,7 +1150,7 @@ button, input {
   color: #f0f0f0;
 }
 .dpst-summary .dpst-total {
-  border-top: 1px solid hsla(0, 0%, 100%, .32);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.32);
   margin-top: 15px;
   padding-top: 15px;
   font-family: SFProDisplay-Bold;
@@ -1197,12 +1202,12 @@ button, input {
   border-bottom: 1px solid #4d4b59;
 }
 .gst-number-view .gst-input-view .form-control {
-  padding: .813rem 0;
+  padding: 0.813rem 0;
   font-size: 16px;
   color: #fff;
   border: none;
   border-radius: 0;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   background-color: initial;
   font-family: SFProDisplay-Medium;
   box-shadow: none;
@@ -1214,7 +1219,7 @@ button, input {
   text-align: left;
   margin: 15px 0;
   font-size: 14px;
-  cursor: pointer;  
+  cursor: pointer;
   font-weight: 700;
   color: #000;
 }
@@ -1251,7 +1256,7 @@ button, input {
   margin-bottom: 16px;
 }
 .add-funds-body .promocode .form-control {
-  border: 1px solid hsla(0, 0%, 100%, .32);
+  border: 1px solid hsla(0, 0%, 100%, 0.32);
   background-color: #0e2c50;
   border-radius: 12px;
   padding: 10px 80px 10px 15px;
@@ -1295,7 +1300,6 @@ button, input {
   left: 0;
   font-size: 20px;
   color: #fff;
-
 }
 
 .head-title {
@@ -1312,7 +1316,7 @@ button, input {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .payable-amt .payable-amt-view {
   margin-left: 2px;
@@ -1398,7 +1402,8 @@ button, input {
 }
 .payment-method-container .payment-card-cursor:after {
   content: "";
-  background: hsla(0, 0%, 100%, .32) url(https://fanizm.com/app/static/media/spiner.5ee8137e.svg) no-repeat 50% !important;
+  background: hsla(0, 0%, 100%, 0.32)
+    url(https://fanizm.com/app/static/media/spiner.5ee8137e.svg) no-repeat 50% !important;
   background-size: 25px !important;
   width: 100%;
   height: 100%;
@@ -1414,9 +1419,8 @@ button, input {
 }
 .overlay__pyt-img {
   width: 100%;
-  
 }
-.overlay__wrap.overlay__wrap--pay{
+.overlay__wrap.overlay__wrap--pay {
   max-width: 400px;
 }
 .overlay__wrap.overlay__wrap--pay .overlay__content {
@@ -1424,4 +1428,10 @@ button, input {
 }
 .overlay__wrap.overlay__wrap--pay .overlay__body {
   background: transparent;
+}
+
+.btn-add-cash {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }

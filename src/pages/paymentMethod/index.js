@@ -1,3 +1,4 @@
+import Tippy from "@tippyjs/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -82,24 +83,38 @@ const PaymentMethod = () => {
                     <div class="overlay__content">
                       <div className="overlay__body">
                         {paymentOverlay && (
-                          <div
-                            className="overlay__pyt-img"
-                            onClick={() => {
-                              handlePaymentOverlay();
-                            }}
+                          <Tippy
+                            theme="custom"
+                            animation="fade"
+                            visible={true}
+                            content={"This is a highlighted movie!"}
                           >
-                            <img src="qr.jpg" alt="qr" />
-                          </div>
+                            <div
+                              className="overlay__pyt-img highlighted"
+                              onClick={() => {
+                                handlePaymentOverlay();
+                              }}
+                            >
+                              <img src="qr.jpg" alt="qr" />
+                            </div>
+                          </Tippy>
                         )}
                         {successOverlay && (
-                          <div
-                            className="overlay__pyt-img"
-                            onClick={() => {
-                              handleSuccessOverlay();
-                            }}
+                          <Tippy
+                            theme="custom"
+                            animation="fade"
+                            visible={true}
+                            content={"This is a highlighted movie!"}
                           >
-                            <img src="success.jpg" alt="qr" />
-                          </div>
+                            <div
+                              className="overlay__pyt-img highlighted"
+                              onClick={() => {
+                                handleSuccessOverlay();
+                              }}
+                            >
+                              <img src="success.jpg" alt="qr" />
+                            </div>
+                          </Tippy>
                         )}
                       </div>
                     </div>
