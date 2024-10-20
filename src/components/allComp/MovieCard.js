@@ -3,7 +3,7 @@ import React from "react";
 import { FaCalendar, FaTrophy, FaBell } from "react-icons/fa"; // Icons used for the footer
 import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({ title, time, imageUrl, id, coverImg, isHighlighted }) => {
+const MovieCard = ({ title, time, imageUrl, id, coverImg, isHighlighted ,type}) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
@@ -24,6 +24,7 @@ const MovieCard = ({ title, time, imageUrl, id, coverImg, isHighlighted }) => {
     >
       <img src={imageUrl} alt={title} className="movie-image" />
       <div className="lqh-slide-body">
+        <div>{type}</div>
         <div className="time-countdown">
           <FaCalendar className="movie-cal-icon" />
           <span className="timer">22 Oct, 04:55 PM</span>

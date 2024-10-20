@@ -8,7 +8,7 @@ const MovieSection = ({ title, movies, step, setStep, isHighlight }) => {
     <section className="movie-section">
       <div className="section-header">
         <h3>{title}</h3>
-        {/* <span className="view-all">View All</span> */}
+        <span className="view-all">View All</span>
       </div>
       <div className="movie-grid">
         {movies.map((movie, index) => {
@@ -31,6 +31,7 @@ const MovieSection = ({ title, movies, step, setStep, isHighlight }) => {
                   id={movie.id}
                   coverImg={movie.coverImg}
                   isHighlighted={isHighlighted}
+                  type={movie.type}
                 />
               </div>
             </Tippy>
