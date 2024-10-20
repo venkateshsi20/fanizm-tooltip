@@ -99,6 +99,8 @@ body {
   transition-duration: 1s;
   overflow: hidden;
   position: relative;
+  justify-content: center;
+    display: flex;
 }
 .swiper-wrap {
   margin: 10px 0 20px;
@@ -387,6 +389,9 @@ body {
   bottom: -2px;
   right: -2px;
   height: 28px;
+  background-color: #0e2c50;
+}
+a.quiz-modes-handler.highlighted-element:before{
   background-color: transparent;
 }
 
@@ -1401,4 +1406,21 @@ button, input {
   border-radius: 10px;
   top: 0;
   left: 0;
+}
+
+.overlay__pyt-img img {
+  width: 100%;
+}
+.overlay__pyt-img {
+  width: 100%;
+  border-radius: 7px;
+}
+.overlay__wrap.overlay__wrap--pay{
+  max-width: 400px;
+}
+.overlay__wrap.overlay__wrap--pay .overlay__content {
+  background: transparent;
+}
+.overlay__wrap.overlay__wrap--pay .overlay__body {
+  background: transparent;
 }

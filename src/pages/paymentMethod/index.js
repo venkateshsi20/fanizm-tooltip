@@ -49,6 +49,26 @@ const PaymentMethod = () => {
     </div>
   </div>
 
+  <div class="overlay">
+  <div class="overlay__wrap overlay__wrap--pay">
+  <div class="overlay__content">
+<div className="overlay__body">
+
+{ true ? (
+<div className="overlay__pyt-img">
+<img src="qr.jpg" alt="qr"/>
+</div>
+)
+:
+<div className="overlay__pyt-img">
+<img src="success.jpg" alt="qr"/>
+</div>
+}
+
+</div>
+    </div>
+    </div>
+    </div>
 
 </div>
 </div>
