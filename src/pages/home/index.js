@@ -157,7 +157,7 @@ function Home() {
           {/* Footer */}
         </div>
 
-        <Footer step={step} setStep={setStep} />
+        <Footer step={step} setStep={setStep} active={0} />
       </div>
     </div>
   );

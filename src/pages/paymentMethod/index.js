@@ -9,7 +9,7 @@ const PaymentMethod = () => {
 
   const handleSuccessOverlay = () => {
     setSuccessOverlay(!successOverlay);
-    nevigate("/");
+    nevigate("/view-contest");
   };
   const handlePaymentOverlay = () => {
     setPaymentOverlay(!paymentOverlay);

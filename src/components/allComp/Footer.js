@@ -1,11 +1,19 @@
 // src/components/Footer.js
 import React, { useState } from "react";
 // import "./Footer.css";
-import { FaHome, FaUser, FaBell, FaTrophy, FaGift, FaClock, FaQrcode } from "react-icons/fa"; // Icons used for the footer
+import {
+  FaHome,
+  FaUser,
+  FaBell,
+  FaTrophy,
+  FaGift,
+  FaClock,
+  FaQrcode,
+} from "react-icons/fa"; // Icons used for the footer
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
-const Footer = ({ step, setStep }) => {
+const Footer = ({ step, setStep, active }) => {
   const navigate = useNavigate();
   const [showNevigation, setShowNevigation] = useState(false);
   const [navId, setnavId] = useState(1);
@@ -263,40 +271,47 @@ const Footer = ({ step, setStep }) => {
       path: "/",
     },
   ];
+
+  const navBar = [
+    {
+      id: 1,
+      label: "Home",
+      icon: <FaHome className="footer-icon" />,
+    },
+    {
+      id: 2,
+      label: "My Contest",
+      icon: <FaTrophy className="footer-icon" />,
+    },
+    {
+      id: 3,
+      label: "Merchandise",
+      icon: <FaGift className="footer-icon" />,
+    },
+    {
+      id: 4,
+      label: "Upcoming",
+      icon: <FaClock className="footer-icon" />,
+    },
+    {
+      id: 5,
+      label: "Notifications",
+      icon: <FaBell className="footer-icon" />,
+    },
+  ];
   return (
     <div className="default-app-footer">
       <div className="default-inner-footer">
-        <a className="footer-item active">
-          <FaHome className="footer-icon" />
-          <div className="footer-label">
-            <span>Home</span>
-          </div>
-        </a>
-
-        <a className="footer-item ">
-          <FaTrophy className="footer-icon" />
-          <div className="footer-label">
-            <span>My Contest</span>
-          </div>
-        </a>
-        <a className="footer-item ">
-          <FaGift className="footer-icon" />
-          <div className="footer-label">
-            <span>Merchandise</span>
-          </div>
-        </a>
-        <a className="footer-item ">
-          <FaClock className="footer-icon" />
-          <div className="footer-label">
-            <span>UpComing</span>
-          </div>
-        </a>
-        <a className="footer-item ">
-          <FaBell className="footer-icon" />
-          <div className="footer-label">
-            <span>Notifications</span>
-          </div>
-        </a>
+        {navBar.map((nav,index) => {
+          return (
+            <a className={`footer-item ${index == active ? "active" : ""}`}>
+              {nav.icon}
+              <div className="footer-label">
+                <span>{nav.label}</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
       <div className={`footer-quiz-modes`}>
         {step == 1 && <div className="footer-overlay"></div>}

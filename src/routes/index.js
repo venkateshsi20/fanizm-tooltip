@@ -8,6 +8,7 @@ const AppLayout = lazy(() =>
 const Home = lazy(() => import(/* webpackChunkName: "home" */ "../pages/home"));
 const AddFund = lazy(() => import(/* webpackChunkName: "home" */ "../pages/addFund"));
 const PaymentMethod = lazy(() => import(/* webpackChunkName: "home" */ "../pages/paymentMethod"));
+const ViewContest = lazy(() => import(/* webpackChunkName: "home" */ "../pages/viewContest"));
 
 const childRoutes = [
   {
@@ -39,6 +40,14 @@ const childRoutes = [
     element: (
       <Suspense fallback={"loading..."}>
         <PaymentMethod />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/view-contest",
+    element: (
+      <Suspense fallback={"loading..."}>
+        <ViewContest />
       </Suspense>
     ),
   },
