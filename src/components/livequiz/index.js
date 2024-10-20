@@ -84,7 +84,9 @@ const LiveQuiz = () => {
           <div className="web-body-container pb0">
             <div className="header quiz-header">
               <div className="head-col-left">
+              <div className="head-col-left-icon">
                 <FaArrowLeft className="head-action-btn icon-left-arrow" />
+                </div>
               </div>
               <div className="head-col-center">
                 <div className="head-logo">
@@ -168,8 +170,9 @@ const LiveQuiz = () => {
                 </span>
               </div>
               <div className="head-col-right">
-                
+              <div className="head-col-right-icon">
                 <FaQrcode className="head-action-btn icon-qr" />
+                </div>
                 <div className=""></div>
               </div>
             </div>

@@ -22,7 +22,9 @@ const AddFund = () => {
           <div className="web-body-container pb0">
             <div className="header quiz-header">
               <div className="head-col-left">
-              <FaArrowLeft className="head-action-btn icon-left-arrow" />
+              <div className="head-col-left-icon">
+                <FaArrowLeft className="head-action-btn icon-left-arrow" />
+                </div>
               </div>
 
               <div className="head-col-center">
