@@ -144,6 +144,7 @@ function Home() {
             step={step}
             setStep={setStep}
             isHighlight={step == 3}
+            showFilter={true}
           />
           <MovieSection
             title="Trailers"
