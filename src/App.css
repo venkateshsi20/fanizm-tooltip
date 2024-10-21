@@ -1421,6 +1421,7 @@ input {
 }
 .overlay__pyt-img {
   width: 100%;
+  margin-top: 60px;
 }
 .overlay__wrap.overlay__wrap--pay {
   max-width: 400px;
@@ -1570,7 +1571,7 @@ input {
 }
 
 .button {
-  background-color: #ff0033; /* Red color */
+  background-color: #ff002e; /* Red color */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1591,12 +1592,35 @@ input {
   border-bottom-right-radius: 10px;
 }
 
-/* Add a separator between buttons */
-.button + .button {
-  border-left: 2px solid #fff;
-}
+
 .separator {
   margin: 0 10px; 
   color: #ff0033; /* Change color if needed */
   font-weight: bold; /* Make it bold if you like */
+}
+.quiz-lang-header{
+  position: fixed;
+  left: 20px;
+    right: 20px;
+    bottom: 20px;
+    min-width: 300px;
+    max-width: 510px;
+    z-index: 1000;
+    transition: transform .3s ease-out;
+    justify-content: space-between;
+    background: #ff002e;
+    padding: 6px 0;
+    border-radius: 8px;
+}
+.button.right{
+  position: relative;
+}
+.quiz-lang-header .button.right:before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  border-left: 1px solid #1a1919;
+  top: -6px;
+  bottom: 0;
+  height: 50px;
 }

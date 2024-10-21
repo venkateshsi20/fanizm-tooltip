@@ -308,7 +308,7 @@ const ViewContest = () => {
                 >
                   <img src="view-contest.jpg" alt="qr" />
                 </div>
-                <div className="button-group">
+                <div className="button-group quiz-lang-header">
                   <button className="button left">Language</button>
                   <button className="button right">English</button>
                 </div>
