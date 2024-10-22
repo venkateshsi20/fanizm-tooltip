@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaHome,
-  FaUser,
-  FaBell,
-  FaTrophy,
-  FaGift,
-  FaClock,
-  FaQrcode,
-} from "react-icons/fa"; 
+import { FaHome, FaBell, FaTrophy, FaGift, FaClock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
@@ -403,13 +395,10 @@ const Footer = ({ step, setStep, active }) => {
                           i === 1 && handleNavClick(nav.id, nav.path);
                         }}
                         style={{
-                       
                           border: "2px solid #fff",
                           borderRadius: "8px",
-                          boxShadow:
-                            "0 4px 20px rgba(224, 32, 32, 0.5)" ,
-                          transform:
-                            "scale(1.05)",
+                          boxShadow: "0 4px 20px rgba(224, 32, 32, 0.5)",
+                          transform: "scale(1.05)",
                           transition:
                             "transform 0.2s ease, box-shadow 0.2s ease",
                         }}
