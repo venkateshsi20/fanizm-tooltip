@@ -96,7 +96,7 @@ const PaymentMethod = () => {
                                 handlePaymentOverlay();
                               }}
                             >
-                              <img src="qr.jpg" alt="qr" />
+                              <img src="images/qr.jpg" alt="qr" />
                             </div>
                           </Tippy>
                         )}
@@ -114,7 +114,7 @@ const PaymentMethod = () => {
                                 handleSuccessOverlay();
                               }}
                             >
-                              <img src="success.jpg" alt="qr" />
+                              <img src="images/success.jpg" alt="qr" />
                             </div>
                           </Tippy>
                         )}

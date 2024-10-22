@@ -82,7 +82,7 @@ const ViewContest = () => {
                               <li role="presentation" className="live-contest ">
                                 <a role="button" href="#">
                                   <span className="live-highlight">
-                                    <img src="icon-live.png" alt="live" />
+                                    <img src="images/icon-live.png" alt="live" />
                                     <span className="live-indicator"></span>
                                   </span>
                                   Live
@@ -323,7 +323,7 @@ const ViewContest = () => {
                       setViewContest(2);
                     }}
                   >
-                    <img src="view-contest.jpg" alt="qr" />
+                    <img src="images/view-contest.jpg" alt="qr" />
                   </div>
                 </Tippy>
                 <div className="button-group quiz-lang-header">
@@ -373,7 +373,7 @@ const ViewContest = () => {
                       setViewContest(3);
                     }}
                   >
-                    <img src="qst-1.png" alt="qr" />
+                    <img src="images/qst-1.png" alt="qr" />
                   </div>
                 </Tippy>
               </>
@@ -419,7 +419,7 @@ const ViewContest = () => {
                       setViewContest(4);
                     }}
                   >
-                    <img src="qst-2.png" alt="qr" />
+                    <img src="images/qst-2.png" alt="qr" />
                   </div>
                 </Tippy>
               </>
@@ -465,7 +465,7 @@ const ViewContest = () => {
                       nevigate("/");
                     }}
                   >
-                    <img src="result.png" alt="qr" />
+                    <img src="images/result.png" alt="qr" />
                   </div>
                 </Tippy>
               </>
