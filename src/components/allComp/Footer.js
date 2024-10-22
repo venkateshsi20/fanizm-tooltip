@@ -1,6 +1,4 @@
-// src/components/Footer.js
 import React, { useState } from "react";
-// import "./Footer.css";
 import {
   FaHome,
   FaUser,
@@ -9,7 +7,7 @@ import {
   FaGift,
   FaClock,
   FaQrcode,
-} from "react-icons/fa"; // Icons used for the footer
+} from "react-icons/fa"; 
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
@@ -405,14 +403,13 @@ const Footer = ({ step, setStep, active }) => {
                           i == 1 && handleNavClick(nav.id, nav.path);
                         }}
                         style={{
-                          // color: "#fff",
-                          // position: "relative",
-                          border: "2px solid #fff" /* Custom border color */,
-                          borderRadius: "8px" /* Rounded corners */,
+                       
+                          border: "2px solid #fff",
+                          borderRadius: "8px",
                           boxShadow:
-                            "0 4px 20px rgba(224, 32, 32, 0.5)" /* Shadow effect */,
+                            "0 4px 20px rgba(224, 32, 32, 0.5)" ,
                           transform:
-                            "scale(1.05)" /* Slightly scale up the highlighted item */,
+                            "scale(1.05)",
                           transition:
                             "transform 0.2s ease, box-shadow 0.2s ease",
                         }}
@@ -442,11 +439,6 @@ const Footer = ({ step, setStep, active }) => {
                       <div className="qmvi-content">
                         <div className="title">{nav.title}</div>
                       </div>
-                      {/* {navId === nav.id ? (
-                        <div className="qmvi-checked"></div>
-                      ) : (
-                        <div className="qmvi-checked"></div>
-                      )} */}
                     </a>
                   )}
                 </>
