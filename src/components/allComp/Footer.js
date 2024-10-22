@@ -302,7 +302,7 @@ const Footer = ({ step, setStep, active }) => {
   return (
     <div className="default-app-footer">
       <div className="default-inner-footer">
-        {navBar.map((nav,index) => {
+        {navBar.map((nav, index) => {
           return (
             <a className={`footer-item ${index == active ? "active" : ""}`}>
               {nav.icon}
@@ -328,6 +328,7 @@ const Footer = ({ step, setStep, active }) => {
             onClick={() => {
               handlenevigation();
             }}
+            style={{ boxShadow: step == 1 ? "none" : "0 0 0 1.5px #e70908" }}
           >
             <svg
               width="26.9039034px"
@@ -397,7 +398,7 @@ const Footer = ({ step, setStep, active }) => {
                       visible={step == 2}
                     >
                       <a
-                        className="qm-nav-item mega selected active"
+                        className="qm-nav-item mega selected active highlighted"
                         href="#"
                         aria-current="page"
                         onClick={() => {
@@ -406,7 +407,7 @@ const Footer = ({ step, setStep, active }) => {
                         style={{
                           // color: "#fff",
                           // position: "relative",
-                          border: "2px solid yellow" /* Custom border color */,
+                          border: "2px solid #fff" /* Custom border color */,
                           borderRadius: "8px" /* Rounded corners */,
                           boxShadow:
                             "0 4px 20px rgba(224, 32, 32, 0.5)" /* Shadow effect */,

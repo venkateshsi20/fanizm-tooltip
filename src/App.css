@@ -384,6 +384,7 @@ body {
 .default-app-footer .quiz-modes-handler {
   box-shadow: 0 0 0 1.5px #e70908;
 }
+
 .footer-quiz-modes .quiz-modes-handler:before {
   content: "";
   position: absolute;
@@ -880,9 +881,9 @@ a.quiz-modes-handler.highlighted-element:before {
 
 /* src/components/CustomTooltip.css */
 .tippy-box[data-theme~="custom"] {
-  background-color: #e70908; /* Tooltip background */
+  background-color: #fff; /* Tooltip background */
   color: black; /* Tooltip text color */
-  border: 2px solid black; /* Optional border */
+  /* border: 2px solid black; Optional border */
   font-weight: bold;
   border-radius: 8px; /* Rounded corners */
   padding: 5px;
@@ -890,11 +891,15 @@ a.quiz-modes-handler.highlighted-element:before {
 
 .tippy-box[data-theme~="custom"][data-placement^="top"] .tippy-arrow {
   border-top-color: #e70908;
-  color: #e70908;
+  color: #fff;
+}
+.tippy-box[data-theme~="custom"][data-placement^="bottom"] .tippy-arrow {
+  border-top-color: #e70908;
+  color: #fff;
 }
 
 .tippy-arrow {
-  color: #e70908; /* Arrow color to match background */
+  color: #fff; /* Arrow color to match background */
 }
 
 /* src/components/HighlightedTooltip.css */
@@ -914,8 +919,8 @@ a.quiz-modes-handler.highlighted-element:before {
 .highlighted-element {
   position: relative;
   z-index: 0; /* Bring above the overlay */
-  border: 2px solid red; /* Red border */
-  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #fff; /* white border */
+  border-radius: 10px; /* Rounded corners */
   background-color: black; /* Black background */
   padding: 10px;
   cursor: pointer;
@@ -943,7 +948,8 @@ a.quiz-modes-handler.highlighted-element:before {
 }
 
 .highlighted {
-  border: 2px solid yellow; /* Highlight color */
+  position: relative;
+  border: 2px solid #ffffff; /* Highlight color */
   /* transform: scale(1.1); Slight scaling effect */
   z-index: 1000; /* Bring highlighted card above others */
   padding: 5px;
@@ -1592,27 +1598,26 @@ input {
   border-bottom-right-radius: 10px;
 }
 
-
 .separator {
-  margin: 0 10px; 
+  margin: 0 10px;
   color: #ff0033; /* Change color if needed */
   font-weight: bold; /* Make it bold if you like */
 }
-.quiz-lang-header{
+.quiz-lang-header {
   position: fixed;
   left: 20px;
-    right: 20px;
-    bottom: 20px;
-    min-width: 300px;
-    max-width: 510px;
-    z-index: 1000;
-    transition: transform .3s ease-out;
-    justify-content: space-between;
-    background: #ff002e;
-    padding: 6px 0;
-    border-radius: 8px;
+  right: 20px;
+  bottom: 20px;
+  min-width: 300px;
+  max-width: 510px;
+  z-index: 1000;
+  transition: transform 0.3s ease-out;
+  justify-content: space-between;
+  background: #ff002e;
+  padding: 6px 0;
+  border-radius: 8px;
 }
-.button.right{
+.button.right {
   position: relative;
 }
 .quiz-lang-header .button.right:before {

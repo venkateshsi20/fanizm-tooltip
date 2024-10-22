@@ -88,6 +88,7 @@ const PaymentMethod = () => {
                             animation="fade"
                             visible={true}
                             content={"This is a highlighted movie!"}
+                            placement="top"
                           >
                             <div
                               className="overlay__pyt-img highlighted"
@@ -105,6 +106,7 @@ const PaymentMethod = () => {
                             animation="fade"
                             visible={true}
                             content={"This is a highlighted movie!"}
+                            placement="top"
                           >
                             <div
                               className="overlay__pyt-img highlighted"
