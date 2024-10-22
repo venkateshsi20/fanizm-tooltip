@@ -374,7 +374,62 @@ const ViewContest = () => {
                       setViewContest(3);
                     }}
                   >
-                    <img src="images/qst-1.png" alt="qr" />
+                    {/* <img src="images/qst-1.png" alt="qr" /> */}
+
+                    <div className="practice-contest__container">
+                    <div className="practice-contest__header">
+<div className="practice-contest__lhs">
+  <div className="practice-contest__points">
+    <span>10</span><p>Total Points</p>
+  </div>
+</div>
+<div className="practice-contest__rhs">
+  <div className="practice-contest__rank-wrap">
+  <div className="practice-contest__label">
+<FaTrophy className="trophy-icon"/>
+<span>Practice Contests</span>
+  </div>
+  <div className="practice-contest__rank">
+<span>1</span>
+<p>Rank</p>
+  </div>
+  </div>
+</div>
+                    </div>
+
+                    <div className="practice-contest__qus-number">
+<ul>
+  <li className="correct">1</li>
+  <li className="wrong">2</li>
+  <li className="current">3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  </ul>
+                    </div>
+
+<div className="practice-contest__qus-heading">
+<span>What was Shekhawat's designation?????</span>
+ </div>
+
+ <div className="practice-contest__progBar">
+ <CircularProgress duration={10} />
+ </div>
+
+ <div class="practice-contest__qus-list">
+    <div class="practice-contest__qus-item correct"><span>SP</span></div>
+    <div class="practice-contest__qus-item wrong"><span>DSP</span></div>
+    <div class="practice-contest__qus-item selected"><span>ACP</span></div>
+    <div class="practice-contest__qus-item"><span>IPS</span></div>
+</div>
+
+ <div className="practice-contest__note"><span>Correct answer will get you 10 points.</span></div>
+
+                  </div>
                   </div>
                 </Tippy>
               </>

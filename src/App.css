@@ -1706,7 +1706,11 @@ flex: 1;
   background: #61863b;
 }
 .practice-contest__qus-number ul li.wrong{
-  background: #050505;
+  background: #e70908;
+  border-color: #e70908;
+}
+.practice-contest__qus-number ul li.current{
+  background: transparent;
   border-color: #e70908;
 }
 
@@ -1727,6 +1731,7 @@ flex: 1;
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .practice-contest__note {
   margin: 40px 0 10px;
@@ -1767,3 +1772,15 @@ circle {
   color: #e70908;
 }
 
+
+.correct {
+  background-color: #61863b; /* Light green for correct answers */
+}
+
+.wrong {
+  background-color: #e70908; /* Light red for wrong answers */
+}
+
+.selected {
+  border-color: #e70908; /* Light blue for selected items */
+}
