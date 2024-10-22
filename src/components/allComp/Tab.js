@@ -17,11 +17,7 @@ const Tabs = ({ tabs }) => {
           </li>
         ))}
       </ul>
-      {/* <div className="tab-content">
-        {tabs.map(tab => 
-          activeTab === tab.id ? <div key={tab.id}>{tab.content}</div> : null
-        )}
-      </div> */}
+ 
     </div>
   );
 };

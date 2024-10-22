@@ -48,7 +48,7 @@ const ViewContest = () => {
       >
         <div className="routing-550">
           <div className="web-body-container pb0">
-            {viewContest == 0 ? (
+            {viewContest === 0 ? (
               <>
                 <div className="header quiz-header">
                   <div className="head-col-left">
@@ -83,7 +83,7 @@ const ViewContest = () => {
                               <li role="presentation" className="live-contest ">
                                 <a role="button" href="#">
                                   <span className="live-highlight">
-                                    <img src="icon-live.png" alt="live" />
+                                    <img src="images/icon-live.png" alt="live" />
                                     <span className="live-indicator"></span>
                                   </span>
                                   Live
@@ -163,7 +163,7 @@ const ViewContest = () => {
                                                     <FaShare className="icon-share-arrow" />
                                                   </h3>
                                                 </div>
-                                                <div className="display-table d-flex top-btm-10px contest-pbar-view">
+                                                <div className="display-table d-flex top-btm-10px contest-pbar-view highlighted">
                                                   <div className="progress-bar-default display-table-cell v-mid">
                                                     <div className="progress">
                                                       <div
@@ -192,18 +192,28 @@ const ViewContest = () => {
                                                       </span>
                                                     </div>
                                                   </div>
-                                                  <div
-                                                    className="view-btn"
-                                                    onClick={() => {
-                                                      setViewContest(1);
-                                                    }}
+                                                  <Tippy
+                                                    theme="custom"
+                                                    animation="fade"
+                                                    visible={true}
+                                                    content={
+                                                      "This is a highlighted movie!"
+                                                    }
                                                   >
-                                                    View
-                                                  </div>
+                                                    <div
+                                                      className="view-btn "
+                                                      onClick={() => {
+                                                        setViewContest(1);
+                                                      }}
+                                                    >
+                                                      View
+                                                    </div>
+                                                  </Tippy>
                                                 </div>
                                               </div>
+                                              <div className="quiz-overlay" />
                                             </div>
-                                            <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body contest-box">
+                                            {/* <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body contest-box">
                                               <div className="contest-list-header">
                                                 <div className="contest-heading">
                                                   <h3 className="win-type">
@@ -255,7 +265,7 @@ const ViewContest = () => {
                                                   </div>
                                                 </div>
                                               </div>
-                                            </div>
+                                            </div> */}
                                           </div>
                                         </div>
                                       ))}
@@ -272,7 +282,7 @@ const ViewContest = () => {
                 </div>
                 <Footer active={1} />
               </>
-            ) : viewContest == 1 ? (
+            ) : viewContest === 1 ? (
               <>
                 <div className="header quiz-header">
                   <div
@@ -301,14 +311,22 @@ const ViewContest = () => {
                   </div>
                   <div className="head-col-right"></div>
                 </div>
-                <div
-                  className="overlay__pyt-img highlighted"
-                  onClick={() => {
-                    setViewContest(2);
-                  }}
+                <Tippy
+                  theme="custom"
+                  animation="fade"
+                  visible={true}
+                  content={"This is a highlighted movie!"}
+                  placement="bottom"
                 >
-                  <img src="view-contest.jpg" alt="qr" />
-                </div>
+                  <div
+                    className="overlay__pyt-img highlighted"
+                    onClick={() => {
+                      setViewContest(2);
+                    }}
+                  >
+                    <img src="images/view-contest.jpg" alt="qr" />
+                  </div>
+                </Tippy>
                 <div className="button-group quiz-lang-header">
                   <button className="button left">Language</button>
                   <button className="button right">English</button>
@@ -343,78 +361,22 @@ const ViewContest = () => {
                   </div>
                   <div className="head-col-right"></div>
                 </div>{" "}
-                <div
-                  className="overlay__pyt-img highlighted"
-                  onClick={() => {
-                    setViewContest(3);
-                  }}
+                <Tippy
+                  theme="custom"
+                  animation="fade"
+                  visible={true}
+                  content={"This is a highlighted movie!"}
+                  placement="bottom"
                 >
-                  {/* <img src="qst-1.png" alt="qr" /> */}
-
-                  <div className="practice-contest__container">
-                    <div className="practice-contest__header">
-<div className="practice-contest__lhs">
-  <div className="practice-contest__points">
-    <span>10</span><p>Total Points</p>
-  </div>
-</div>
-<div className="practice-contest__rhs">
-  <div className="practice-contest__rank-wrap">
-  <div className="practice-contest__label">
-<FaTrophy className="trophy-icon"/>
-<span>Practice Contests</span>
-  </div>
-  <div className="practice-contest__rank">
-<span>1</span>
-<p>Rank</p>
-  </div>
-  </div>
-</div>
-                    </div>
-
-                    <div className="practice-contest__qus-number">
-<ul>
-  <li className="correct">1</li>
-  <li className="wrong">2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li>10</li>
-  </ul>
-                    </div>
-
-<div className="practice-contest__qus-heading">
-<span>What was Shekhawat's designation?????</span>
- </div>
-
- <div className="practice-contest__progBar">
- <CircularProgress duration={10} />
- </div>
-
- <div className="practice-contest__qus-list">
-<div className="practice-contest__qus-item">
-<span>SP</span>
-</div>
-<div className="practice-contest__qus-item">
-<span>DSP</span>
-</div>
-<div className="practice-contest__qus-item">
-<span>ACP</span>
-</div>
-<div className="practice-contest__qus-item">
-<span>IPS</span>
-</div>
-
- </div>
-
- <div className="practice-contest__note"><span>Correct answer will get you 10 points.</span></div>
-
+                  <div
+                    className="overlay__pyt-img highlighted"
+                    onClick={() => {
+                      setViewContest(3);
+                    }}
+                  >
+                    <img src="images/qst-1.png" alt="qr" />
                   </div>
-                </div>
+                </Tippy>
               </>
             ) : viewContest === 3 ? (
               <>
@@ -445,14 +407,22 @@ const ViewContest = () => {
                   </div>
                   <div className="head-col-right"></div>
                 </div>{" "}
-                <div
-                  className="overlay__pyt-img highlighted"
-                  onClick={() => {
-                    setViewContest(4);
-                  }}
+                <Tippy
+                  theme="custom"
+                  animation="fade"
+                  visible={true}
+                  content={"This is a highlighted movie!"}
+                  placement="bottom"
                 >
-                  <img src="qst-2.png" alt="qr" />
-                </div>
+                  <div
+                    className="overlay__pyt-img highlighted"
+                    onClick={() => {
+                      setViewContest(4);
+                    }}
+                  >
+                    <img src="images/qst-2.png" alt="qr" />
+                  </div>
+                </Tippy>
               </>
             ) : (
               <>
@@ -483,14 +453,22 @@ const ViewContest = () => {
                   </div>
                   <div className="head-col-right"></div>
                 </div>{" "}
-                <div
-                  className="overlay__pyt-img highlighted"
-                  onClick={() => {
-                    nevigate("/");
-                  }}
+                <Tippy
+                  theme="custom"
+                  animation="fade"
+                  visible={true}
+                  content={"This is a highlighted movie!"}
+                  placement="bottom"
                 >
-                  <img src="result.png" alt="qr" />
-                </div>
+                  <div
+                    className="overlay__pyt-img highlighted"
+                    onClick={() => {
+                      nevigate("/");
+                    }}
+                  >
+                    <img src="images/result.png" alt="qr" />
+                  </div>
+                </Tippy>
               </>
             )}
           </div>

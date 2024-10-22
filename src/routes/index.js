@@ -1,14 +1,20 @@
 import React, { lazy, Suspense } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import LiveQuiz from "../components/livequiz";
 
 const AppLayout = lazy(() =>
   import(/* webpackChunkName: "AppLayout" */ "../components/applayout")
 );
 const Home = lazy(() => import(/* webpackChunkName: "home" */ "../pages/home"));
-const AddFund = lazy(() => import(/* webpackChunkName: "home" */ "../pages/addFund"));
-const PaymentMethod = lazy(() => import(/* webpackChunkName: "home" */ "../pages/paymentMethod"));
-const ViewContest = lazy(() => import(/* webpackChunkName: "home" */ "../pages/viewContest"));
+const AddFund = lazy(() =>
+  import(/* webpackChunkName: "home" */ "../pages/addFund")
+);
+const PaymentMethod = lazy(() =>
+  import(/* webpackChunkName: "home" */ "../pages/paymentMethod")
+);
+const ViewContest = lazy(() =>
+  import(/* webpackChunkName: "home" */ "../pages/viewContest")
+);
 
 const childRoutes = [
   {
@@ -70,7 +76,7 @@ const route = [
   },
 ];
 
-export const router = createBrowserRouter(route);
+export const router = createMemoryRouter(route);
 
 const Routes = () => (
   <Suspense fallback={"loading...."}>

@@ -1,15 +1,5 @@
-// src/components/Footer.js
 import React, { useState } from "react";
-// import "./Footer.css";
-import {
-  FaHome,
-  FaUser,
-  FaBell,
-  FaTrophy,
-  FaGift,
-  FaClock,
-  FaQrcode,
-} from "react-icons/fa"; // Icons used for the footer
+import { FaHome, FaBell, FaTrophy, FaGift, FaClock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 
@@ -302,9 +292,12 @@ const Footer = ({ step, setStep, active }) => {
   return (
     <div className="default-app-footer">
       <div className="default-inner-footer">
-        {navBar.map((nav,index) => {
+        {navBar.map((nav, index) => {
           return (
-            <a className={`footer-item ${index == active ? "active" : ""}`}>
+            <a
+              className={`footer-item ${index === active ? "active" : ""}`}
+              href="#"
+            >
               {nav.icon}
               <div className="footer-label">
                 <span>{nav.label}</span>
@@ -314,20 +307,22 @@ const Footer = ({ step, setStep, active }) => {
         })}
       </div>
       <div className={`footer-quiz-modes`}>
-        {step == 1 && <div className="footer-overlay"></div>}
+        {step === 1 && <div className="footer-overlay"></div>}
         <Tippy
           content="This is a customized tooltip"
           theme="custom"
           animation="fade"
-          visible={step == 1}
+          visible={step === 1}
         >
           <a
             className={`quiz-modes-handler ${
-              step == 1 ? "highlighted-element" : ""
+              step === 1 ? "highlighted-element" : ""
             }`}
+            href="#"
             onClick={() => {
               handlenevigation();
             }}
+            style={{ boxShadow: step === 1 ? "none" : "0 0 0 1.5px #e70908" }}
           >
             <svg
               width="26.9039034px"
@@ -389,29 +384,25 @@ const Footer = ({ step, setStep, active }) => {
             <div className="quiz-modes-nav">
               {navbar.map((nav, i) => (
                 <>
-                  {i == 1 ? (
+                  {i === 1 ? (
                     <Tippy
                       content="This is a customized tooltip"
                       theme="custom"
                       animation="fade"
-                      visible={step == 2}
+                      visible={step === 2}
                     >
                       <a
-                        className="qm-nav-item mega selected active"
+                        className="qm-nav-item mega selected active highlighted"
                         href="#"
                         aria-current="page"
                         onClick={() => {
-                          i == 1 && handleNavClick(nav.id, nav.path);
+                          i === 1 && handleNavClick(nav.id, nav.path);
                         }}
                         style={{
-                          // color: "#fff",
-                          // position: "relative",
-                          border: "2px solid yellow" /* Custom border color */,
-                          borderRadius: "8px" /* Rounded corners */,
-                          boxShadow:
-                            "0 4px 20px rgba(224, 32, 32, 0.5)" /* Shadow effect */,
-                          transform:
-                            "scale(1.05)" /* Slightly scale up the highlighted item */,
+                          border: "2px solid #fff",
+                          borderRadius: "8px",
+                          boxShadow: "0 4px 20px rgba(224, 32, 32, 0.5)",
+                          transform: "scale(1.05)",
                           transition:
                             "transform 0.2s ease, box-shadow 0.2s ease",
                         }}
@@ -441,11 +432,6 @@ const Footer = ({ step, setStep, active }) => {
                       <div className="qmvi-content">
                         <div className="title">{nav.title}</div>
                       </div>
-                      {/* {navId === nav.id ? (
-                        <div className="qmvi-checked"></div>
-                      ) : (
-                        <div className="qmvi-checked"></div>
-                      )} */}
                     </a>
                   )}
                 </>

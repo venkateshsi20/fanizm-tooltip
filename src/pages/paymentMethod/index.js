@@ -88,6 +88,7 @@ const PaymentMethod = () => {
                             animation="fade"
                             visible={true}
                             content={"This is a highlighted movie!"}
+                            placement="top"
                           >
                             <div
                               className="overlay__pyt-img highlighted"
@@ -95,7 +96,7 @@ const PaymentMethod = () => {
                                 handlePaymentOverlay();
                               }}
                             >
-                              <img src="qr.jpg" alt="qr" />
+                              <img src="images/qr.jpg" alt="qr" />
                             </div>
                           </Tippy>
                         )}
@@ -105,6 +106,7 @@ const PaymentMethod = () => {
                             animation="fade"
                             visible={true}
                             content={"This is a highlighted movie!"}
+                            placement="top"
                           >
                             <div
                               className="overlay__pyt-img highlighted"
@@ -112,7 +114,7 @@ const PaymentMethod = () => {
                                 handleSuccessOverlay();
                               }}
                             >
-                              <img src="success.jpg" alt="qr" />
+                              <img src="images/success.jpg" alt="qr" />
                             </div>
                           </Tippy>
                         )}

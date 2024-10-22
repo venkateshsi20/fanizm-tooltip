@@ -143,7 +143,7 @@ function Home() {
             movies={movies}
             step={step}
             setStep={setStep}
-            isHighlight={step == 3}
+            isHighlight={step === 3}
             showFilter={true}
           />
           <MovieSection
@@ -151,7 +151,7 @@ function Home() {
             movies={trailers}
             step={0}
             setStep={setStep}
-            isHighlight={step == 3}
+            isHighlight={step === 3}
           />
 
           {/* Footer */}
