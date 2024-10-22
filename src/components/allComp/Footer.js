@@ -294,7 +294,10 @@ const Footer = ({ step, setStep, active }) => {
       <div className="default-inner-footer">
         {navBar.map((nav, index) => {
           return (
-            <a className={`footer-item ${index === active ? "active" : ""}`}>
+            <a
+              className={`footer-item ${index === active ? "active" : ""}`}
+              href="#"
+            >
               {nav.icon}
               <div className="footer-label">
                 <span>{nav.label}</span>
@@ -315,6 +318,7 @@ const Footer = ({ step, setStep, active }) => {
             className={`quiz-modes-handler ${
               step === 1 ? "highlighted-element" : ""
             }`}
+            href="#"
             onClick={() => {
               handlenevigation();
             }}
