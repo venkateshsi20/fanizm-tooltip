@@ -1,9 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import {
-  createBrowserRouter,
-  createMemoryRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import LiveQuiz from "../components/livequiz";
 
 const AppLayout = lazy(() =>

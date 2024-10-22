@@ -47,7 +47,7 @@ const ViewContest = () => {
       >
         <div className="routing-550">
           <div className="web-body-container pb0">
-            {viewContest == 0 ? (
+            {viewContest === 0 ? (
               <>
                 <div className="header quiz-header">
                   <div className="head-col-left">
@@ -281,7 +281,7 @@ const ViewContest = () => {
                 </div>
                 <Footer active={1} />
               </>
-            ) : viewContest == 1 ? (
+            ) : viewContest === 1 ? (
               <>
                 <div className="header quiz-header">
                   <div

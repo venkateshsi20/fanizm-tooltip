@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import Overlay from "../allComp/Overlay";
 import ViewOverlay from "../allComp/ViewOverlay";
 import Tippy from "@tippyjs/react";
-import { FaArrowLeft,FaQrcode } from "react-icons/fa";
+import { FaArrowLeft, FaQrcode } from "react-icons/fa";
 
 const LiveQuiz = () => {
   const location = useLocation();
@@ -84,8 +84,8 @@ const LiveQuiz = () => {
           <div className="web-body-container pb0">
             <div className="header quiz-header">
               <div className="head-col-left">
-              <div className="head-col-left-icon">
-                <FaArrowLeft className="head-action-btn icon-left-arrow" />
+                <div className="head-col-left-icon">
+                  <FaArrowLeft className="head-action-btn icon-left-arrow" />
                 </div>
               </div>
               <div className="head-col-center">
@@ -170,8 +170,8 @@ const LiveQuiz = () => {
                 </span>
               </div>
               <div className="head-col-right">
-              <div className="head-col-right-icon">
-                <FaQrcode className="head-action-btn icon-qr" />
+                <div className="head-col-right-icon">
+                  <FaQrcode className="head-action-btn icon-qr" />
                 </div>
                 <div className=""></div>
               </div>
@@ -250,7 +250,7 @@ const LiveQuiz = () => {
                                 className="infinite-scroll-component"
                                 style={{ height: "auto", overflow: "auto" }}
                               >
-                                {activeTab == 1 && (
+                                {activeTab === 1 && (
                                   <div className="contest-list-wrapper xmt20 mb20">
                                     {upcomingContest.map((contest, i) => (
                                       <div className="contest-listing-card is-mega-contest">
@@ -294,20 +294,22 @@ const LiveQuiz = () => {
                                                       "This is a highlighted movie!"
                                                     }
                                                     disabled={
-                                                      i == 1 ||
+                                                      i === 1 ||
                                                       joinContestOverlay
                                                     } // Disable tooltip when not highlighted
                                                   >
                                                     <div
                                                       className={`display-table-cell v-mid position-relative entry-criteria ${
-                                                        i == 0 &&
+                                                        i === 0 &&
                                                         !joinContestOverlay
                                                           ? "highlighted"
                                                           : ""
                                                       }`}
                                                       style={{
                                                         zIndex:
-                                                          i == 0 ? "100" : null,
+                                                          i === 0
+                                                            ? "100"
+                                                            : null,
                                                       }}
                                                     >
                                                       <span className="entry-txt">
@@ -359,7 +361,7 @@ const LiveQuiz = () => {
                                             </div>
                                           </div>
                                         </div>
-                                        {i == 0 && !joinContestOverlay ? (
+                                        {i === 0 && !joinContestOverlay ? (
                                           <div className="quiz-overlay" />
                                         ) : null}
                                       </div>
@@ -371,7 +373,7 @@ const LiveQuiz = () => {
                                     </div>
                                   </div>
                                 )}
-                                {activeTab == 2 && (
+                                {activeTab === 2 && (
                                   <div className="contest-list-wrapper xmt20 mb20">
                                     <div className="contest-listing-card is-mega-contest">
                                       <div className="rookie-contest-view">
@@ -475,7 +477,7 @@ const LiveQuiz = () => {
           quizData={quizData}
         />
       )}
-{/* 
+      {/* 
       {viewContestOverlay && (
         <ViewOverlay
           handleJoinContestOverlay={handleJoinContestOverlay}

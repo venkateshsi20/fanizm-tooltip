@@ -302,7 +302,7 @@ const Footer = ({ step, setStep, active }) => {
       <div className="default-inner-footer">
         {navBar.map((nav, index) => {
           return (
-            <a className={`footer-item ${index == active ? "active" : ""}`}>
+            <a className={`footer-item ${index === active ? "active" : ""}`}>
               {nav.icon}
               <div className="footer-label">
                 <span>{nav.label}</span>
@@ -312,21 +312,21 @@ const Footer = ({ step, setStep, active }) => {
         })}
       </div>
       <div className={`footer-quiz-modes`}>
-        {step == 1 && <div className="footer-overlay"></div>}
+        {step === 1 && <div className="footer-overlay"></div>}
         <Tippy
           content="This is a customized tooltip"
           theme="custom"
           animation="fade"
-          visible={step == 1}
+          visible={step === 1}
         >
           <a
             className={`quiz-modes-handler ${
-              step == 1 ? "highlighted-element" : ""
+              step === 1 ? "highlighted-element" : ""
             }`}
             onClick={() => {
               handlenevigation();
             }}
-            style={{ boxShadow: step == 1 ? "none" : "0 0 0 1.5px #e70908" }}
+            style={{ boxShadow: step === 1 ? "none" : "0 0 0 1.5px #e70908" }}
           >
             <svg
               width="26.9039034px"
@@ -388,19 +388,19 @@ const Footer = ({ step, setStep, active }) => {
             <div className="quiz-modes-nav">
               {navbar.map((nav, i) => (
                 <>
-                  {i == 1 ? (
+                  {i === 1 ? (
                     <Tippy
                       content="This is a customized tooltip"
                       theme="custom"
                       animation="fade"
-                      visible={step == 2}
+                      visible={step === 2}
                     >
                       <a
                         className="qm-nav-item mega selected active highlighted"
                         href="#"
                         aria-current="page"
                         onClick={() => {
-                          i == 1 && handleNavClick(nav.id, nav.path);
+                          i === 1 && handleNavClick(nav.id, nav.path);
                         }}
                         style={{
                        
