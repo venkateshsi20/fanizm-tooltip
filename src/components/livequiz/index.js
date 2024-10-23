@@ -19,17 +19,6 @@ const LiveQuiz = () => {
     { id: 2, label: "My Contest" },
   ];
   const upcomingContest = [
-    // {
-    //   id: 1,
-    //   contestType: "MEGA CONTEST",
-    //   contestDes: "Enter the hottest contest with mega prize.",
-    //   type: "Practice Contest",
-    //   heading: "Practice Contest",
-    //   entry: "Entry Ticket",
-    //   buttonType: "free",
-    //   left: 5,
-    //   slots: 10,
-    // },
     {
       id: 2,
       contestType: "HEAD TO HEAD",
