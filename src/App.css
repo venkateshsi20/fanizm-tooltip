@@ -1629,3 +1629,158 @@ input {
   bottom: 0;
   height: 50px;
 }
+
+/**Practice contest**/
+.practice-contest__container {
+  padding: 12px;
+}
+.practice-contest__container p {
+  margin: 0;
+}
+.practice-contest__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.practice-contest__rank-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0e2c50;
+    border-radius: 8px;
+    padding: 6px 16px;
+}
+.practice-contest__rhs{
+flex: 1;
+}
+.practice-contest__points {
+  background: #e70908;
+  border-radius: 8px;
+  padding: 6px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.practice-contest__points p{
+  margin: 0;
+}
+.practice-contest__rank {
+  text-align: center;
+  position: relative;
+}
+.practice-contest__rank:before{
+  content: "";
+
+}
+.practice-contest__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.practice-contest__points p, .practice-contest__rank p {
+  font-size: 10px;
+}
+.practice-contest__qus-number {
+  margin-top: 28px;
+}
+.practice-contest__qus-number ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  gap: 10px;
+}
+.practice-contest__qus-number ul li{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background: #d6d6d6;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    
+}
+.practice-contest__qus-number ul li.correct{
+  background: #61863b;
+}
+.practice-contest__qus-number ul li.wrong{
+  background: #e70908;
+  border-color: #e70908;
+}
+.practice-contest__qus-number ul li.current{
+  background: transparent;
+  border-color: #e70908;
+}
+
+.practice-contest__qus-heading{
+  font-size: 24px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+.practice-contest__qus-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+.practice-contest__qus-item{
+  background: #092140;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.practice-contest__note {
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+.circular-progress {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 28px auto;
+}
+
+/* svg {
+  transform: rotate(-90deg);
+} */
+
+circle {
+  fill: none;
+  stroke-width: 2;
+}
+
+.background {
+  stroke: #050505;
+}
+
+.progress {
+  stroke: #393939; /* Change this color as needed */
+  transition: stroke-dasharray 1s linear;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #e70908;
+}
+
+
+.correct {
+  background-color: #61863b; /* Light green for correct answers */
+}
+
+.wrong {
+  background-color: #e70908; /* Light red for wrong answers */
+}
+
+.selected {
+  border-color: #e70908; /* Light blue for selected items */
+}
