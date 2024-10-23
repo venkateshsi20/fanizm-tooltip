@@ -83,7 +83,10 @@ const ViewContest = () => {
                               <li role="presentation" className="live-contest ">
                                 <a role="button" href="#">
                                   <span className="live-highlight">
-                                    <img src="images/icon-live.png" alt="live" />
+                                    <img
+                                      src="images/icon-live.png"
+                                      alt="live"
+                                    />
                                     <span className="live-indicator"></span>
                                   </span>
                                   Live
@@ -213,59 +216,6 @@ const ViewContest = () => {
                                               </div>
                                               <div className="quiz-overlay" />
                                             </div>
-                                            {/* <div className="contest-list contest-listing-list xquiz-contest-card contest-card-body contest-box">
-                                              <div className="contest-list-header">
-                                                <div className="contest-heading">
-                                                  <h3 className="win-type">
-                                                    <span className="position-relative">
-                                                      <span>
-                                                        {contest.type}
-                                                      </span>
-                                                    </span>
-
-                                                    <FaShare className="icon-share-arrow" />
-                                                  </h3>
-                                                </div>
-                                                <div className="display-table d-flex top-btm-10px contest-pbar-view">
-                                                  <div className="progress-bar-default display-table-cell v-mid">
-                                                    <div className="progress">
-                                                      <div
-                                                        role="progressbar"
-                                                        className="progress-bar"
-                                                        aria-valuenow={250}
-                                                        aria-valuemin={0}
-                                                        aria-valuemax={100}
-                                                        style={{
-                                                          width: `${
-                                                            ((contest.slots -
-                                                              contest.left) /
-                                                              contest.slots) *
-                                                            100
-                                                          }%`,
-                                                        }}
-                                                      ></div>
-                                                    </div>
-
-                                                    <div className="progress-bar-value">
-                                                      <span className="total-entries">
-                                                        {contest.left} left
-                                                      </span>
-                                                      <span className="min-entries">
-                                                        {contest.slots} Slots
-                                                      </span>
-                                                    </div>
-                                                  </div>
-                                                  <div
-                                                    className="view-btn"
-                                                    onClick={() => {
-                                                      setViewContest(1);
-                                                    }}
-                                                  >
-                                                    View
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div> */}
                                           </div>
                                         </div>
                                       ))}
@@ -361,77 +311,80 @@ const ViewContest = () => {
                   </div>
                   <div className="head-col-right"></div>
                 </div>{" "}
-                <Tippy
-                  theme="custom"
-                  animation="fade"
-                  visible={true}
-                  content={"This is a highlighted movie!"}
-                  placement="bottom"
+                <div
+                  className="overlay__pyt-img "
+                  onClick={() => {
+                    setViewContest(3);
+                  }}
                 >
-                  <div
-                    className="overlay__pyt-img highlighted"
-                    onClick={() => {
-                      setViewContest(3);
-                    }}
-                  >
-                    {/* <img src="images/qst-1.png" alt="qr" /> */}
-
-                    <div className="practice-contest__container">
+                  <div className="practice-contest__container">
                     <div className="practice-contest__header">
-<div className="practice-contest__lhs">
-  <div className="practice-contest__points">
-    <span>10</span><p>Total Points</p>
-  </div>
-</div>
-<div className="practice-contest__rhs">
-  <div className="practice-contest__rank-wrap">
-  <div className="practice-contest__label">
-<FaTrophy className="trophy-icon"/>
-<span>Practice Contests</span>
-  </div>
-  <div className="practice-contest__rank">
-<span>1</span>
-<p>Rank</p>
-  </div>
-  </div>
-</div>
+                      <div className="practice-contest__lhs">
+                        <div className="practice-contest__points">
+                          <span>10</span>
+                          <p>Total Points</p>
+                        </div>
+                      </div>
+                      <div className="practice-contest__rhs">
+                        <div className="practice-contest__rank-wrap">
+                          <div className="practice-contest__label">
+                            <FaTrophy className="trophy-icon" />
+                            <span>Practice Contests</span>
+                          </div>
+                          <div className="practice-contest__rank">
+                            <span>1</span>
+                            <p>Rank</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="practice-contest__qus-number">
-<ul>
-  <li className="correct">1</li>
-  <li className="wrong">2</li>
-  <li className="current">3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li>10</li>
-  </ul>
+                      <ul>
+                        <li className="current">1</li>
+                        <li className="">2</li>
+                        <li className="">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                      </ul>
                     </div>
 
-<div className="practice-contest__qus-heading">
-<span>What was Shekhawat's designation?????</span>
- </div>
+                    <div className="practice-contest__qus-heading">
+                      <span>What was Shekhawat's designation?????</span>
+                    </div>
 
- <div className="practice-contest__progBar">
- <CircularProgress duration={10} />
- </div>
+                    <div className="practice-contest__progBar">
+                      <CircularProgress duration={10} />
+                    </div>
 
- <div class="practice-contest__qus-list">
-    <div class="practice-contest__qus-item correct"><span>SP</span></div>
-    <div class="practice-contest__qus-item wrong"><span>DSP</span></div>
-    <div class="practice-contest__qus-item selected"><span>ACP</span></div>
-    <div class="practice-contest__qus-item"><span>IPS</span></div>
-</div>
+                    <div class="practice-contest__qus-list">
+                      <div
+                        class="practice-contest__qus-item selected"
+                        onClick={() => setViewContest(3)}
+                      >
+                        <span>SP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>DSP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>ACP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>IPS</span>
+                      </div>
+                    </div>
 
- <div className="practice-contest__note"><span>Correct answer will get you 10 points.</span></div>
-
+                    <div className="practice-contest__note">
+                      <span>Correct answer will get you 10 points.</span>
+                    </div>
                   </div>
-                  </div>
-                </Tippy>
+                </div>
               </>
             ) : viewContest === 3 ? (
               <>
@@ -461,25 +414,78 @@ const ViewContest = () => {
                     <span className="head-title">Pushpa The Rise</span>
                   </div>
                   <div className="head-col-right"></div>
-                </div>{" "}
-                <Tippy
-                  theme="custom"
-                  animation="fade"
-                  visible={true}
-                  content={"This is a highlighted movie!"}
-                  placement="bottom"
-                >
-                  <div
-                    className="overlay__pyt-img highlighted"
-                    onClick={() => {
-                      setViewContest(4);
-                    }}
-                  >
-                    <img src="images/qst-2.png" alt="qr" />
+                </div>
+                <div className="overlay__pyt-img ">
+                  <div className="practice-contest__container">
+                    <div className="practice-contest__header">
+                      <div className="practice-contest__lhs">
+                        <div className="practice-contest__points">
+                          <span>10</span>
+                          <p>Total Points</p>
+                        </div>
+                      </div>
+                      <div className="practice-contest__rhs">
+                        <div className="practice-contest__rank-wrap">
+                          <div className="practice-contest__label">
+                            <FaTrophy className="trophy-icon" />
+                            <span>Practice Contests</span>
+                          </div>
+                          <div className="practice-contest__rank">
+                            <span>1</span>
+                            <p>Rank</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__qus-number">
+                      <ul>
+                        <li className="correct">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                      </ul>
+                    </div>
+
+                    <div className="practice-contest__qus-heading">
+                      <span>What was Shekhawat's designation?????</span>
+                    </div>
+
+                    <div className="practice-contest__progBar">
+                      <CircularProgress duration={10} />
+                    </div>
+
+                    <div class="practice-contest__qus-list">
+                      <div
+                        class="practice-contest__qus-item correct"
+                        onClick={() => setViewContest(4)}
+                      >
+                        <span>SP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>DSP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>ACP</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>IPS</span>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__note">
+                      <span>Correct answer will get you 10 points.</span>
+                    </div>
                   </div>
-                </Tippy>
+                </div>
               </>
-            ) : (
+            ) : viewContest === 4 ? (
               <>
                 <div className="header quiz-header">
                   <div
@@ -507,23 +513,108 @@ const ViewContest = () => {
                     <span className="head-title">Pushpa The Rise</span>
                   </div>
                   <div className="head-col-right"></div>
-                </div>{" "}
-                <Tippy
-                  theme="custom"
-                  animation="fade"
-                  visible={true}
-                  content={"This is a highlighted movie!"}
-                  placement="bottom"
-                >
+                </div>
+                <div className="overlay__pyt-img ">
+                  <div className="practice-contest__container">
+                    <div className="practice-contest__header">
+                      <div className="practice-contest__lhs">
+                        <div className="practice-contest__points">
+                          <span>10</span>
+                          <p>Total Points</p>
+                        </div>
+                      </div>
+                      <div className="practice-contest__rhs">
+                        <div className="practice-contest__rank-wrap">
+                          <div className="practice-contest__label">
+                            <FaTrophy className="trophy-icon" />
+                            <span>Practice Contests</span>
+                          </div>
+                          <div className="practice-contest__rank">
+                            <span>1</span>
+                            <p>Rank</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__qus-number">
+                      <ul>
+                        <li className="correct">1</li>
+                        <li className="current">2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                      </ul>
+                    </div>
+
+                    <div className="practice-contest__qus-heading">
+                      <span>
+                        What caused Konda Readdy to loose his hand?????
+                      </span>
+                    </div>
+
+                    <div className="practice-contest__progBar">
+                      <CircularProgress duration={10} />
+                    </div>
+
+                    <div class="practice-contest__qus-list">
+                      <div
+                        class="practice-contest__qus-item selected"
+                        onClick={() => setViewContest(5)}
+                      >
+                        <span>Bomb</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>Axe</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>Bullet</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>None of the above</span>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__note">
+                      <span>Correct answer will get you 10 points.</span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="header quiz-header">
                   <div
-                    className="overlay__pyt-img highlighted"
+                    className="head-col-left"
                     onClick={() => {
-                      nevigate("/");
+                      setViewContest(4);
                     }}
                   >
-                    <img src="images/result.png" alt="qr" />
+                    <div className="head-col-left-icon">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 448 512"
+                        className="head-action-btn icon-left-arrow"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+                      </svg>
+                    </div>
                   </div>
-                </Tippy>
+                  <div className="head-col-center">
+                    <span className="head-title">Pushpa The Rise</span>
+                  </div>
+                  <div className="head-col-right"></div>
+                </div>
               </>
             )}
           </div>

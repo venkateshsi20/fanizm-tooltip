@@ -30,7 +30,8 @@ const CircularProgress = ({ duration }) => {
           style={{ strokeDasharray: `${progress} 100` }}
         />
       </svg>
-      <div className="percentage">{Math.round(progress)}%</div>
+      <div className="percentage">5:00</div>
+      {/* <div className="percentage">{Math.round(progress)}</div> */}
     </div>
   );
 };
