@@ -288,12 +288,7 @@ const LiveQuiz = () => {
                                                     } // Disable tooltip when not highlighted
                                                   >
                                                     <div
-                                                      className={`display-table-cell v-mid position-relative entry-criteria ${
-                                                        i === 0 &&
-                                                        !joinContestOverlay
-                                                          ? "highlighted"
-                                                          : ""
-                                                      }`}
+                                                      className={`display-table-cell v-mid position-relative entry-criteria `}
                                                       style={{
                                                         zIndex:
                                                           i === 0
@@ -306,7 +301,12 @@ const LiveQuiz = () => {
                                                       </span>{" "}
                                                       <button
                                                         type="button"
-                                                        className="white-base btnStyle btn-rounded btn btn-primary"
+                                                        className={`white-base btnStyle btn-rounded btn btn-primary ${
+                                                          i === 0 &&
+                                                          !joinContestOverlay
+                                                            ? "highlighted"
+                                                            : ""
+                                                        }`}
                                                         onClick={() =>
                                                           handleJoinContestOverlay()
                                                         }

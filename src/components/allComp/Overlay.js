@@ -114,7 +114,7 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
               </div>
             </div>
           </div>
-          <div className="overlay__footer dual-btn-footer modal-footer highlighted">
+          <div className="overlay__footer dual-btn-footer modal-footer ">
             <Tippy
               theme="custom"
               animation="fade"
@@ -122,7 +122,7 @@ const Overlay = ({ handleJoinContestOverlay, quizData }) => {
               content={"This is a highlighted movie!"}
             >
               <a
-                className="joinContestConfirm single-text "
+                className="joinContestConfirm single-text highlighted"
                 onClick={() => {
                   navigate("/add-fund");
                 }}

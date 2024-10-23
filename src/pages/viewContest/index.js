@@ -166,7 +166,7 @@ const ViewContest = () => {
                                                     <FaShare className="icon-share-arrow" />
                                                   </h3>
                                                 </div>
-                                                <div className="display-table d-flex top-btm-10px contest-pbar-view highlighted">
+                                                <div className="display-table d-flex top-btm-10px contest-pbar-view ">
                                                   <div className="progress-bar-default display-table-cell v-mid">
                                                     <div className="progress">
                                                       <div
@@ -204,7 +204,7 @@ const ViewContest = () => {
                                                     }
                                                   >
                                                     <div
-                                                      className="view-btn "
+                                                      className="view-btn highlighted"
                                                       onClick={() => {
                                                         setViewContest(1);
                                                       }}

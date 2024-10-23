@@ -125,7 +125,7 @@ const AddFund = () => {
                       <div className="btn-apply">Apply</div>
                     </div>
                   </div>
-                  <div className="text-center add-fund highlighted">
+                  <div className="text-center add-fund ">
                     <Tippy
                       theme="custom"
                       animation="fade"
@@ -133,7 +133,7 @@ const AddFund = () => {
                       content={"This is a highlighted movie!"}
                     >
                       <a
-                        className="button button-primary-rounded button-block btn-add-cash"
+                        className="button button-primary-rounded button-block btn-add-cash highlighted"
                         onClick={() => {
                           nevigate("/payment-method");
                         }}
