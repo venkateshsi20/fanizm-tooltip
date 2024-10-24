@@ -823,9 +823,17 @@ const ViewContest = () => {
                     </a>
                   </div>
                   <div class="total-points">
-                    <div className="result-button">
-                      Total Points: <span>10.00</span>
-                    </div>
+                    <Tippy
+                      theme="custom"
+                      animation="fade"
+                      visible={true}
+                      content={"This is a highlighted movie!"}
+                      placement="top"
+                    >
+                      <div className="result-button highlighted">
+                        Total Points: <span>10.00</span>
+                      </div>
+                    </Tippy>
                   </div>
                 </div>
               </>
