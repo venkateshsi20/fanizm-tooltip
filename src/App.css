@@ -1888,8 +1888,8 @@ circle {
   align-items: center; /* Center items horizontally */
   justify-content: center;
   border-radius: 10px;
-  padding: 8px;    font-weight: 600;
-
+  padding: 8px;
+  font-weight: 600;
 }
 
 .total-points span {
@@ -1905,4 +1905,268 @@ circle {
   background: #707070;
   font-size: 30px;
   font-weight: 600;
+}
+
+.footer-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+}
+
+.default-app-footer.mega-footer {
+  border-top-color: #e70908;
+}
+
+.default-app-footer {
+  width: 100%;
+  max-width: 550px;
+  height: 78px;
+  background: #0e2c50;
+  box-shadow: 8px 8px 16px rgba(73, 71, 71, 0.5058823529411764);
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  border-top: 1.5px solid #16447b;
+}
+
+.default-inner-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 17px;
+  width: 100%;
+  margin-top: auto;
+}
+.default-app-footer.mega-footer .footer-link.active {
+  background: #e70908;
+}
+
+.default-inner-footer .footer-link.active {
+  background: #16447b;
+  border-radius: 2rem;
+  padding: 3px 7px;
+}
+.default-inner-footer .footer-link {
+  transition: all 0.2s ease-in;
+  padding: 3px 7px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+}
+
+.default-inner-footer .footer-link.active .link-title {
+  display: inline-block;
+}
+
+.default-inner-footer .footer-link .link-title {
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  display: none;
+}
+.footer-quiz-modes {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.default-app-footer.mega-footer .quiz-modes-handler {
+  box-shadow: 0 0 0 1.5px #e70908;
+}
+
+.footer-quiz-modes .quiz-modes-handler {
+  cursor: pointer;
+  position: absolute;
+  left: calc(50% - 31px);
+  top: -36px;
+  width: 62px;
+  height: 62px;
+  background: #0e2c50;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.5px #16447b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.footer-quiz-modes .quiz-modes-handler .svg-icon {
+  font-size: 20px;
+  color: #16447b;
+  margin: 0;
+  position: relative;
+}
+
+.footer-quiz-modes .quiz-modes-handler .svg-icon .svg-bgpath.mega {
+  fill: #e70908;
+}
+
+.footer-quiz-modes .quiz-modes-handler:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  height: 28px;
+  background-color: #0e2c50;
+}
+
+.quiz-modes-drawer.is--open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.quiz-modes-backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.5px;
+  top: 0;
+  background: linear-gradient(
+    181.07deg,
+    transparent,
+    rgba(0, 0, 0, 0.51) 13.06%,
+    #000
+  );
+}
+
+.quiz-modes-backdrop:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -78px;
+  height: 120px;
+}
+
+.quiz-modes-nav {
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  margin: 0 auto 42px;
+}
+
+.qm-nav-item.mega {
+  border-color: #e70908;
+}
+
+.qm-nav-item figure {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.qm-nav-item .qmvi-content {
+  flex: 1 1;
+}
+
+.qm-nav-item * {
+  cursor: pointer !important;
+}
+
+.qm-nav-item .qmvi-content .title {
+  font-family: SFProDisplay-Bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.qm-nav-item .qmvi-checked {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+
+.qm-nav-item.h2h {
+  border-color: #cc8e28;
+}
+.qm-nav-item {
+  display: flex;
+  height: 40px;
+  border: 2px solid #16447b;
+  background-color: #0b091c;
+  margin-top: 2px;
+  align-items: center;
+  color: #212121;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.qm-nav-item.trivia {
+  border-color: #1699d1;
+}
+.qm-nav-item:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.red-border-modal {
+  position: relative; /* Modal is positioned relative to its container */
+  margin-top: -80px; /* Ensures it's above the footer */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid red;
+  padding: 15px;
+  background-color: #101010;
+  border-radius: 10px;
+  width: 300px; /* Width of the modal */
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Shadow for visibility */
+  text-align: center;
+  bottom: 6em;
+  left: -21em;
+  height: fit-content;
+}
+
+.option {
+  /* margin-bottom: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+  height: 2rem;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.option label {
+  color: #fff;
+}
+
+/* Responsive handling for smaller screen sizes */
+@media (max-width: 768px) {
+  .red-border-modal {
+    width: 90%; /* Modal takes up more width on small screens */
+    height: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .red-border-modal {
+    padding: 10px; /* Reduce padding for smaller devices */
+    left: -25em;
+    height: fit-content;
+  }
 }
