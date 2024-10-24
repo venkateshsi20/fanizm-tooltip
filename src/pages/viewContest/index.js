@@ -23,6 +23,32 @@ const ViewContest = () => {
       slots: 2,
     },
   ];
+  const result = [
+    {
+      result: "Result:",
+      resAns: 0,
+      rank: "Rank:",
+      rankAns: 1,
+      won: "Won",
+      wonAns: "--",
+    },
+    {
+      result: "Result:",
+      resAns: 0,
+      rank: "Rank:",
+      rankAns: 1,
+      won: "Won",
+      wonAns: "--",
+    },
+    {
+      result: "Result:",
+      resAns: 0,
+      rank: "Rank:",
+      rankAns: 1,
+      won: "Won",
+      wonAns: "--",
+    },
+  ];
 
   return (
     <>
@@ -586,13 +612,13 @@ const ViewContest = () => {
                   </div>
                 </div>
               </>
-            ) : (
+            ) : viewContest === 5 ? (
               <>
                 <div className="header quiz-header">
                   <div
                     className="head-col-left"
                     onClick={() => {
-                      setViewContest(4);
+                      setViewContest(5);
                     }}
                   >
                     <div className="head-col-left-icon">
@@ -614,6 +640,157 @@ const ViewContest = () => {
                     <span className="head-title">Pushpa The Rise</span>
                   </div>
                   <div className="head-col-right"></div>
+                </div>
+                <div className="overlay__pyt-img ">
+                  <div className="practice-contest__container">
+                    <div className="practice-contest__header">
+                      <div className="practice-contest__lhs">
+                        <div className="practice-contest__points">
+                          <span>10</span>
+                          <p>Total Points</p>
+                        </div>
+                      </div>
+                      <div className="practice-contest__rhs">
+                        <div className="practice-contest__rank-wrap">
+                          <div className="practice-contest__label">
+                            <FaTrophy className="trophy-icon" />
+                            <span>Practice Contests</span>
+                          </div>
+                          <div className="practice-contest__rank">
+                            <span>1</span>
+                            <p>Rank</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__qus-number">
+                      <ul>
+                        <li className="correct">1</li>
+                        <li className="current">2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                      </ul>
+                    </div>
+
+                    <div className="practice-contest__qus-heading">
+                      <span>
+                        What caused Konda Readdy to loose his hand?????
+                      </span>
+                    </div>
+
+                    <div className="practice-contest__progBar">
+                      <CircularProgress duration={10} />
+                    </div>
+
+                    <div class="practice-contest__qus-list">
+                      <div
+                        class="practice-contest__qus-item selected wrong"
+                        onClick={() => setViewContest(6)}
+                      >
+                        <span>Bomb</span>
+                      </div>
+                      <div class="practice-contest__qus-item correct">
+                        <span>Axe</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>Bullet</span>
+                      </div>
+                      <div class="practice-contest__qus-item">
+                        <span>None of the above</span>
+                      </div>
+                    </div>
+
+                    <div className="practice-contest__note">
+                      <span>Correct answer will get you 10 points.</span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div class="container">
+                  <div className="header quiz-header">
+                    <div
+                      className="head-col-left"
+                      onClick={() => {
+                        setViewContest(5);
+                      }}
+                    >
+                      <div className="head-col-left-icon">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 448 512"
+                          className="head-action-btn icon-left-arrow"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="head-col-center">
+                      <span className="head-title">Pushpa The Rise</span>
+                    </div>
+                    <div className="head-col-right"></div>
+                  </div>
+                  <div class="kudos">
+                    <div class="kudos-circle">
+                      <img
+                        src="https://fanizm-prod.s3.amazonaws.com/upload/profile/thumb/avatar4.png"
+                        alt="Logo"
+                        class="logo"
+                      />
+                    </div>
+                    <div className="kudos-1">
+                      <span>KUDOS!</span>
+                    </div>
+                    <p>This is your probable winning if there is no tie</p>
+                  </div>
+                  <div class="contests">
+                    <div class="contest-details">
+                      <h3>3 Contest(s) Joined</h3>
+                      {result.map((result) => (
+                        <>
+                          <div class="contest">
+                            <div className="contest-data">
+                              <span>{result.result}</span>
+                              <span>{result.resAns}</span>
+                            </div>
+                            <div className="contest-data">
+                              <span>{result.rank}</span>
+                              <span>{result.rankAns}</span>
+                            </div>
+                            <div className="contest-data">
+                              <span>{result.wonAns}</span>
+                              <span>{result.won}</span>
+                            </div>
+                          </div>
+                        </>
+                      ))}
+                    </div>
+                  </div>
+                  <div class="quiz-points">
+                    <h4>CHECK HOW YOU DID!</h4>
+                    <p>Quiz Points: 10 pts</p>
+                    <a href="#" class="view-rules">
+                      View Rules
+                    </a>
+                  </div>
+                  <div class="total-points">
+                    <div className="result-button">
+                      Total Points: <span>10.00</span>
+                    </div>
+                  </div>
                 </div>
               </>
             )}
