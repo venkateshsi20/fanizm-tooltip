@@ -618,7 +618,7 @@ const ViewContest = () => {
                   <div
                     className="head-col-left"
                     onClick={() => {
-                      setViewContest(5);
+                      setViewContest(4);
                     }}
                   >
                     <div className="head-col-left-icon">
