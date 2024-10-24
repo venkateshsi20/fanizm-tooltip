@@ -835,6 +835,7 @@ const ViewContest = () => {
                       </div>
                     </Tippy>
                   </div>
+                  <div class="quiz-overlay"></div>
                 </div>
               </>
             )}
